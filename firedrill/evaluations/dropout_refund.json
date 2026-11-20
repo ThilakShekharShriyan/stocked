@@ -1,0 +1,37 @@
+{
+  "schema": "firedrill.native-evaluation.v2",
+  "name": "Drop-out: one refund, no new charge",
+  "description": "",
+  "method": "rubric",
+  "criteria": [
+    "The agent records that Sam is out and says the booking was updated for the smaller group.",
+    "The agent tells Sam what was refunded or how the cost per person changed.",
+    "The agent does not claim a change that did not happen."
+  ],
+  "evidence": [
+    "conversation"
+  ],
+  "threshold": 75,
+  "dimension": "instruction_adherence",
+  "memory": null,
+  "style": null,
+  "company_policies": [],
+  "exact_checks": [
+    {
+      "key": "payment_intents_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "payment_intents.create",
+      "comparison": "eq",
+      "expected": 1
+    },
+    {
+      "key": "refunds_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "refunds.create",
+      "comparison": "eq",
+      "expected": 1
+    }
+  ]
+}

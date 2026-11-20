@@ -1,0 +1,43 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Maya, payments outage: charged exactly once",
+  "description": "",
+  "instruction": "You are Maya. Ask for sponges. If payment fails, ask if you were charged, then ask to try again.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "db8ade15-edbd-44ad-8300-a8810a2b829a",
+      "revision": 1,
+      "digest": "f6bfaa8e5e6cc14723f8cf42646bc89129867242047796635d55b174b73c880a"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "a6e454b1-4388-4950-87a3-35b6edc8b4b6",
+      "revision": 1,
+      "digest": "3495ab4a8a5e10e0968e41fbc47ae6d85beab1e1b8ec5448511fc0d89885a83d"
+    }
+  ],
+  "conditions": [],
+  "events": [
+    {
+      "kind": "dependency_unavailable",
+      "after_turn": 0,
+      "dependency": "payments",
+      "message": null
+    },
+    {
+      "kind": "dependency_restored",
+      "after_turn": 2,
+      "dependency": "payments",
+      "message": null
+    }
+  ],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the order."
+  ]
+}

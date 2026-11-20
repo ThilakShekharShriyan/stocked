@@ -1,0 +1,14 @@
+.env*
+!.env.example
+target/
+node_modules/
+.next/
+__pycache__/
+.venv/
+firedrill/plan.json
+.DS_Store
+.venv-source-file/
+.airbyte-cache/
+plan.*.json
+demo/parts/
+vendor/

@@ -1,0 +1,18 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Sam drops out of dinner",
+  "description": "A flatmate who can no longer make a dinner that is already booked.",
+  "goals": [
+    "Tell the house he can't make the dinner at Luca's",
+    "Find out what happens to the booking and his share"
+  ],
+  "constraints": [
+    "Wants to know whether anyone is charged again or refunded"
+  ],
+  "communication": "Apologetic and brief.",
+  "initial_message": "Hey, it's Sam. Something came up, I can't make the dinner at Luca's anymore.",
+  "memory_facts": [
+    "He is Sam",
+    "Dinner at Luca's is already booked"
+  ]
+}

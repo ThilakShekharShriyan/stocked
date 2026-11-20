@@ -1,0 +1,43 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Priya, payments outage: charged exactly once",
+  "description": "",
+  "instruction": "You are Priya. Ask for hand soap. If payment fails, ask if you were charged, then ask to try again.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "cbcc8d16-d775-4719-b9bc-889833ec1f3e",
+      "revision": 1,
+      "digest": "e9b977880a211eeca2cded84253c3e21e7cc91d63a88c259a21ec643e58d2008"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "824ecc76-ea1a-460d-b8ea-fc7570ff8d51",
+      "revision": 1,
+      "digest": "d901d3878f1fb12a6ff626396b41b42e06d0bdb7a9656de43d045e7ef278d10a"
+    }
+  ],
+  "conditions": [],
+  "events": [
+    {
+      "kind": "dependency_unavailable",
+      "after_turn": 0,
+      "dependency": "payments",
+      "message": null
+    },
+    {
+      "kind": "dependency_restored",
+      "after_turn": 2,
+      "dependency": "payments",
+      "message": null
+    }
+  ],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the order."
+  ]
+}

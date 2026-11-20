@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Sam drops out, then rejoins",
+  "description": "A flatmate who cancels on a booked dinner and then changes their mind.",
+  "goals": [
+    "First say they can't make the dinner at Luca's",
+    "After that is confirmed, say they can come after all"
+  ],
+  "constraints": [],
+  "communication": "Natural and brief.",
+  "initial_message": "It's Sam. Take me off the dinner at Luca's, I can't make it.",
+  "memory_facts": [
+    "He is Sam",
+    "Dinner at Luca's is already booked"
+  ]
+}

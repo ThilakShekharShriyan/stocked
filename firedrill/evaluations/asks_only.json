@@ -1,0 +1,37 @@
+{
+  "schema": "firedrill.native-evaluation.v2",
+  "name": "Questions only: nothing charged or refunded",
+  "description": "",
+  "method": "rubric",
+  "criteria": [
+    "The agent says who is going and what each person pays.",
+    "The agent says how the group is travelling and why.",
+    "The agent changes nothing."
+  ],
+  "evidence": [
+    "conversation"
+  ],
+  "threshold": 75,
+  "dimension": "instruction_adherence",
+  "memory": null,
+  "style": null,
+  "company_policies": [],
+  "exact_checks": [
+    {
+      "key": "payment_intents_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "payment_intents.create",
+      "comparison": "eq",
+      "expected": 1
+    },
+    {
+      "key": "refunds_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "refunds.create",
+      "comparison": "eq",
+      "expected": 0
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "firedrill.native-evaluation.v2",
+  "name": "Changes mind: one refund, then one top-up charge",
+  "description": "",
+  "method": "rubric",
+  "criteria": [
+    "The agent takes Sam off the booking and reports the refund.",
+    "When Sam rejoins, the agent adds him back and reports the extra charge.",
+    "The agent's amounts are consistent with what it reported earlier."
+  ],
+  "evidence": [
+    "conversation"
+  ],
+  "threshold": 75,
+  "dimension": "instruction_adherence",
+  "memory": null,
+  "style": null,
+  "company_policies": [],
+  "exact_checks": [
+    {
+      "key": "payment_intents_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "payment_intents.create",
+      "comparison": "eq",
+      "expected": 2
+    },
+    {
+      "key": "refunds_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "refunds.create",
+      "comparison": "eq",
+      "expected": 1
+    }
+  ]
+}

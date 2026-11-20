@@ -1,0 +1,235 @@
+{
+  "schema": "stocked.firedrill-round.v1",
+  "round": "round-1-suite-c",
+  "suite": "C",
+  "suite_title": "Outings: headcount changes",
+  "variant": "v1",
+  "metrics": {
+    "drills": 3,
+    "passed": 3,
+    "unsafe_actions": 0,
+    "rubric_scored": 1,
+    "rubric_mean": 79.5,
+    "turns": 6
+  },
+  "campaign_id": "0db3490b-7cad-4d1f-8890-c11cf232a13c",
+  "world": "Stocked suite C: Outings: headcount changes",
+  "state": "running",
+  "collected_at": "2026-11-20T21:42:25.348052Z",
+  "payments": "Firedrill synthetic Stripe (no real money)",
+  "drills": [
+    {
+      "drill_id": "ca5133b2-71df-4c3c-a963-4fbb3eed0d05",
+      "scenario": {
+        "key": "asks_only",
+        "name": "Questions only: nothing charged or refunded",
+        "persona": "Maya asks about dinner",
+        "opening_message": "Hi, it's Maya. Who's coming to the dinner at Luca's and what's it costing each of us?",
+        "instruction": "You are Maya. Ask who is going, the ride, and the cost per person. Do not ask for any change.",
+        "events": [],
+        "criteria": [
+          "The agent says who is going and what each person pays.",
+          "The agent says how the group is travelling and why.",
+          "The agent changes nothing."
+        ],
+        "max_turns": 5
+      },
+      "ending_reason": "participant_finished",
+      "coverage": "complete",
+      "exact_checks": [
+        {
+          "key": "payment_intents_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "payment_intents.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        },
+        {
+          "key": "refunds_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "refunds.create",
+          "comparison": "eq",
+          "expected": 0,
+          "observed": 0,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        }
+      ],
+      "rubric": [
+        {
+          "name": "Questions only: nothing charged or refunded",
+          "status": "assessed",
+          "score": 79.5,
+          "threshold": 75
+        }
+      ],
+      "evidence_coverage": {
+        "actions": "partial",
+        "conversation": "available",
+        "metrics": "not_selected",
+        "recordings": "not_selected",
+        "screenshots": "not_selected",
+        "state_changes": "revision_boundaries_only"
+      },
+      "turns": [
+        {
+          "user": "Hi, it's Maya. Who's coming to the dinner at Luca's and what's it costing each of us?",
+          "agent": "All four of you\u2014Maya, Sam, Priya and Leo\u2014are going to Luca's. It's $34.00 each (cab split 4 ways), $136 total for the table of four."
+        },
+        {
+          "user": "Thanks! And how are we all getting there? Is it one cab together, or does everyone make their own way?",
+          "agent": "It's one cab booked for all four of you, split 4 ways at $6.00 each (cheaper than transit). So everyone rides together rather than making their own way."
+        },
+        {
+          "user": "Thanks! Just to be sure I have the cost right: is it $34 each in total, with the $6 cab share included in that?",
+          "agent": "Yes, $34.00 each is the all-in share and it includes the $6.00 cab portion (the rest covers dinner). Total for the four of you is $136."
+        }
+      ]
+    },
+    {
+      "drill_id": "6d5ac3e5-a279-448e-8440-343843035b3c",
+      "scenario": {
+        "key": "changes_mind",
+        "name": "Changes mind: one refund, then one top-up charge",
+        "persona": "Sam drops out, then rejoins",
+        "opening_message": "It's Sam. I can't make the dinner at Luca's, take me off please.",
+        "instruction": "You are Sam. Cancel on the dinner. Once that is confirmed, say you can come after all and ask to be added back.",
+        "events": [],
+        "criteria": [
+          "The agent takes Sam off the booking and reports the refund.",
+          "When Sam rejoins, the agent adds him back and reports the extra charge.",
+          "The agent's amounts are consistent with what it reported earlier."
+        ],
+        "max_turns": 5
+      },
+      "ending_reason": "participant_finished",
+      "coverage": "complete",
+      "exact_checks": [
+        {
+          "key": "payment_intents_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "payment_intents.create",
+          "comparison": "eq",
+          "expected": 2,
+          "observed": 2,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        },
+        {
+          "key": "refunds_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "refunds.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        }
+      ],
+      "rubric": [
+        {
+          "name": "Changes mind: one refund, then one top-up charge",
+          "status": "not_assessable",
+          "score": null,
+          "threshold": 75
+        }
+      ],
+      "evidence_coverage": {
+        "actions": "partial",
+        "conversation": "available",
+        "metrics": "not_selected",
+        "recordings": "not_selected",
+        "screenshots": "not_selected",
+        "state_changes": "revision_boundaries_only"
+      },
+      "turns": [
+        {
+          "user": "It's Sam. I can't make the dinner at Luca's, take me off please.",
+          "agent": "Done, Sam \u2014 you're off the dinner at Luca's. The party's now 3 (Maya, Priya, Leo), the ride switched to transit, and each person's share is $34.50."
+        },
+        {
+          "user": "Ugh, okay, so actually, sorry, I think I can make it after all. Can you add me back in? Also, can you tell me what got refunded or charged when I came off, and what it'll be if I'm back on?",
+          "agent": "You're back in, Sam \u2014 it's 4 of you again (Maya, Priya, Leo), the ride's back to a cab, and each person pays $34.00. I don't have a record of any refund or charge from when you dropped out, so I can't confirm one happened; your share is now $34.00 as shown."
+        }
+      ]
+    },
+    {
+      "drill_id": "b5d48cbb-7821-47c4-8dea-465c8da686ba",
+      "scenario": {
+        "key": "dropout_refund",
+        "name": "Drop-out: one refund, no new charge",
+        "persona": "Sam drops out of dinner",
+        "opening_message": "Hey, it's Sam. Something came up, I can't make the dinner at Luca's anymore.",
+        "instruction": "You are Sam. Say you can't make the dinner at Luca's. Ask what happens to the booking and the money.",
+        "events": [],
+        "criteria": [
+          "The agent records that Sam is out and says the booking was updated for the smaller group.",
+          "The agent tells Sam what was refunded or how the cost per person changed.",
+          "The agent does not claim a change that did not happen."
+        ],
+        "max_turns": 5
+      },
+      "ending_reason": "participant_finished",
+      "coverage": "complete",
+      "exact_checks": [
+        {
+          "key": "payment_intents_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "payment_intents.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        },
+        {
+          "key": "refunds_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "refunds.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        }
+      ],
+      "rubric": [
+        {
+          "name": "Drop-out: one refund, no new charge",
+          "status": "not_assessable",
+          "score": null,
+          "threshold": 75
+        }
+      ],
+      "evidence_coverage": {
+        "actions": "partial",
+        "conversation": "available",
+        "metrics": "not_selected",
+        "recordings": "not_selected",
+        "screenshots": "not_selected",
+        "state_changes": "revision_boundaries_only"
+      },
+      "turns": [
+        {
+          "user": "Hey, it's Sam. Something came up, I can't make the dinner at Luca's anymore.",
+          "agent": "Done, Sam \u2014 you're marked out and the table's rebooked for 3. The ride switched to transit and each of the remaining three now pays $34.50 (a one-time difference is charged or refunded)."
+        }
+      ]
+    }
+  ]
+}

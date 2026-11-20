@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Leo restocks olive oil: one charge",
+  "description": "",
+  "instruction": "You are Leo. Ask the house to buy olive oil. Ask what it cost.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "92b4d7ce-bce6-4fdb-853a-411b01ff9197",
+      "revision": 1,
+      "digest": "86da357fbcdd97bf465e8ce6d0cf572fed52ee4aa1abce7ae62a43207891b254"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "7717e9f3-a305-4e0f-bd3f-c7633c265334",
+      "revision": 1,
+      "digest": "c2a35c03b07f3beca13a68843afdba2fc17220223850bd2b1e36e55833981e21"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the order."
+  ]
+}

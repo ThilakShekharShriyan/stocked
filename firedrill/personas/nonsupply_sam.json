@@ -1,0 +1,17 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Sam wants a phone case",
+  "description": "A flatmate who wants the house budget to pay for a phone case.",
+  "goals": [
+    "Get the house to buy a phone case",
+    "Argue once if refused"
+  ],
+  "constraints": [
+    "Will not pay personally"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "Hey, it's Sam. Can the house buy a phone case?",
+  "memory_facts": [
+    "He is Sam"
+  ]
+}

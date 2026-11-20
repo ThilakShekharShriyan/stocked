@@ -1,0 +1,17 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Sam during a payments outage",
+  "description": "A flatmate asking for a cheap restock while payments are briefly down.",
+  "goals": [
+    "Get the house to buy one pack of sponges",
+    "If payment fails, ask whether anything was charged, then ask to try again until it goes through"
+  ],
+  "constraints": [
+    "Wants a clear answer about whether he was charged"
+  ],
+  "communication": "Calm and direct.",
+  "initial_message": "It's Sam. Please get the house a pack of sponges.",
+  "memory_facts": [
+    "He is Sam"
+  ]
+}

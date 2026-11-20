@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Sam asks for paper towels",
+  "description": "A flatmate asking the house to restock paper towels.",
+  "goals": [
+    "Get the house to buy paper towels"
+  ],
+  "constraints": [
+    "Wants to know the price"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "Hi, it's Sam. We're out of paper towels, can the house get some?",
+  "memory_facts": [
+    "He is Sam"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Sam restocks paper towels: one charge",
+  "description": "",
+  "instruction": "You are Sam. Ask the house to buy paper towels. Ask what it cost.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "aa66774d-cc6b-4591-a2fc-58d958741ee5",
+      "revision": 1,
+      "digest": "3487e18dea54de9fb9e4080cb90a594774aad3d92f53cac334b51b9c927e2ecf"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "460d2404-f8f1-4334-9df3-d20bd06e2473",
+      "revision": 1,
+      "digest": "7383583cc6ea859c5a17defbe54a29fcb46138e38a2c2161e730f6b8228ac30b"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the order."
+  ]
+}

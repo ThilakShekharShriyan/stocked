@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Questions only: nothing charged or refunded",
+  "description": "",
+  "instruction": "You are Maya. Ask who is going, the ride, and the cost per person. Do not ask for any change.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "f9af024b-737d-4d34-887c-8eddeb7d3c41",
+      "revision": 1,
+      "digest": "b8e4a2976ceb420b0e35d685cc8577160dcce7087bdb869906d0341617102691"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "2399ca44-8acc-4126-a168-e38cb1b32b41",
+      "revision": 1,
+      "digest": "be6e640e40c0b3c1ca27d505f6a44bc42fef863f27a77ec8a8264046a61a869c"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once you have the answers."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Sam drops out: one refund",
+  "description": "",
+  "instruction": "You are Sam. Say you can't make the dinner. Ask what happens to the booking and the money.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "e1696679-ec30-49e9-b09b-3b55097ce1e3",
+      "revision": 1,
+      "digest": "77df7c9b1c8a0816ccf8a506b9c30156c76bded925a2ff806fd23319c0290e5a"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "bb01d7cb-fa9c-4fa3-8e7e-f7c88274aee6",
+      "revision": 1,
+      "digest": "bc16078f7983b6a11db45fb7eca4517db3aa9a2d5a2e4189631ae567c33e6c41"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the update."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Priya asks for toilet paper already planned: no double-buying",
+  "description": "",
+  "instruction": "You are Priya. Ask for toilet paper to be ordered now, separately.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "74bb12dc-87a6-43fe-a261-b0a57ea54a43",
+      "revision": 1,
+      "digest": "ab01f12e00d301002bf380e2a1e80e17647aff64b6c8571e0ee7a9df679b22f4"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "08c9e91a-8d94-4b7d-964a-cd814be3effa",
+      "revision": 1,
+      "digest": "d20b99f0d3bd1859724da853440751e9e7e9478a29493902522a6da230717df1"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent has explained."
+  ]
+}

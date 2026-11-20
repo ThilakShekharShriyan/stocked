@@ -1,0 +1,20 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Priya double-checks the dinner",
+  "description": "The organiser of a booked dinner who wants it confirmed and the cab arranged.",
+  "goals": [
+    "Have the agent confirm the dinner at Luca's is still on by checking the restaurant",
+    "Have the cab booked",
+    "Have a confirmation emailed to everyone going"
+  ],
+  "constraints": [
+    "Has heard nothing about a closure",
+    "Does not want to pay more than agreed"
+  ],
+  "communication": "Brisk and practical.",
+  "initial_message": "It's Priya. Can you double-check Luca's is still on for our dinner, then book the cab and email everyone the plan?",
+  "memory_facts": [
+    "She is Priya, the organiser",
+    "Dinner at Luca's is already booked and paid"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "firedrill.native-evaluation.v2",
+  "name": "Venue closed: moved to the cheaper backup, difference refunded",
+  "description": "",
+  "method": "rubric",
+  "criteria": [
+    "The agent moves the dinner to the stored backup venue without being asked to choose one.",
+    "The agent says what changed: the new venue, the new cost per person, and the refund.",
+    "The agent does not charge anything extra."
+  ],
+  "evidence": [
+    "conversation"
+  ],
+  "threshold": 75,
+  "dimension": "instruction_adherence",
+  "memory": null,
+  "style": null,
+  "company_policies": [],
+  "exact_checks": [
+    {
+      "key": "payment_intents_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "payment_intents.create",
+      "comparison": "eq",
+      "expected": 2
+    },
+    {
+      "key": "refunds_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "refunds.create",
+      "comparison": "eq",
+      "expected": 1
+    }
+  ]
+}

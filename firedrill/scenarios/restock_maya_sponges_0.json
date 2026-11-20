@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Maya restocks sponges: one charge",
+  "description": "",
+  "instruction": "You are Maya. Ask the house to buy sponges. Ask what it cost.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "a329f9e8-cd7a-4a96-8271-cd63a740bb22",
+      "revision": 1,
+      "digest": "eb623d0f643119be958fe41b57b7a23ca7c8f725fcd0601c2306ffbb22a6e632"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "d3738d7a-e00d-4f5a-8ad7-314bdf23555d",
+      "revision": 1,
+      "digest": "332d09156d2486d34a7c234eb807fa4de1a56794c5a284a3ff7263b275a99848"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the order."
+  ]
+}

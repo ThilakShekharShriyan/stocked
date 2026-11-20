@@ -1,0 +1,17 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Maya restocks sponges during an outage",
+  "description": "The house approver asking for sponges while payments are briefly down.",
+  "goals": [
+    "Get the house to buy sponges",
+    "If payment fails, ask whether anything was charged, then ask to try again until it works"
+  ],
+  "constraints": [
+    "Wants a clear answer about charges"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "It's Maya. Please get the house some sponges.",
+  "memory_facts": [
+    "She is Maya"
+  ]
+}

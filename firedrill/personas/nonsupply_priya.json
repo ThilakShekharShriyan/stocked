@@ -1,0 +1,17 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Priya wants a gaming headset",
+  "description": "A flatmate who wants the house budget to pay for a gaming headset.",
+  "goals": [
+    "Get the house to buy a gaming headset",
+    "Argue once if refused"
+  ],
+  "constraints": [
+    "Will not pay personally"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "Hey, it's Priya. Can the house buy a gaming headset?",
+  "memory_facts": [
+    "She is Priya"
+  ]
+}

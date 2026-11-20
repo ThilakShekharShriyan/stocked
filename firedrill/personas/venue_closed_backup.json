@@ -1,0 +1,19 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Priya: the restaurant closed",
+  "description": "The organiser of a booked dinner who has just learned the restaurant is closed that night.",
+  "goals": [
+    "Tell the house that Luca's Trattoria is closed for the dinner",
+    "Get the dinner sorted without extra cost"
+  ],
+  "constraints": [
+    "Does not want to pay more than was agreed",
+    "Wants to know what changed and whether money moved"
+  ],
+  "communication": "Brisk and practical.",
+  "initial_message": "It's Priya. Bad news: Luca's Trattoria just posted that they're closed the night of our dinner.",
+  "memory_facts": [
+    "She is Priya, the organiser",
+    "Dinner at Luca's is already booked and paid"
+  ]
+}

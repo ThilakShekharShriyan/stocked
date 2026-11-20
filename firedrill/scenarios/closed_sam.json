@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Sam reports a closure: moved to backup, one refund",
+  "description": "",
+  "instruction": "You are Sam. Report that Luca's is closed. Ask what happens now.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "82551bed-dec3-4f7d-aa75-730efd41d4d0",
+      "revision": 1,
+      "digest": "1e9b2083226764dad9bd615d1c78d9bbf868bfea1538d4ff879f396bfc363a7f"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "2b4cb358-d071-48fc-b62b-7ff0a4ebe307",
+      "revision": 1,
+      "digest": "cb37bc894284ba14d3888eed956baaa8b7d47a5a0b4aaacda43d78f38f14a242"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent says where dinner is now."
+  ]
+}

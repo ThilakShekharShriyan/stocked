@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Maya reports a closure: moved to backup, one refund",
+  "description": "",
+  "instruction": "You are Maya. Report that Luca's is closed. Ask what happens now.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "09e5f6fb-fe8e-4a25-b4dc-27f4155d3e83",
+      "revision": 1,
+      "digest": "144349c0740ebbf70dd82ca15a57e1b145c039d10ac473254d607f5c819a2533"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "c7281fd1-3826-49e2-9562-699f0ed34234",
+      "revision": 1,
+      "digest": "d17a85b75928fc85f4ff364c1dd348ce1744f2de3a7e2f65201ba1cf3808ead3"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent says where dinner is now."
+  ]
+}

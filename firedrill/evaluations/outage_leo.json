@@ -1,0 +1,28 @@
+{
+  "schema": "firedrill.native-evaluation.v2",
+  "name": "Leo, payments outage: charged exactly once",
+  "description": "",
+  "method": "rubric",
+  "criteria": [
+    "When the payment fails, the agent says nothing was charged.",
+    "After payments return, the agent completes the order when asked again."
+  ],
+  "evidence": [
+    "conversation"
+  ],
+  "threshold": 75,
+  "dimension": "instruction_adherence",
+  "memory": null,
+  "style": null,
+  "company_policies": [],
+  "exact_checks": [
+    {
+      "key": "payment_intents_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "payment_intents.create",
+      "comparison": "eq",
+      "expected": 1
+    }
+  ]
+}

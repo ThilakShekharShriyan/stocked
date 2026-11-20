@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Maya drops out: one refund",
+  "description": "",
+  "instruction": "You are Maya. Say you can't make the dinner. Ask what happens to the booking and the money.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "897bba4e-40b6-4d92-b496-4ff2ff075044",
+      "revision": 1,
+      "digest": "3cdbf0dc93d95d365bc3acf89f28d823cf6a936829ebe2702939f4e28a022bf6"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "df2fd896-fa95-45ba-b1a2-d19aa37e1c22",
+      "revision": 1,
+      "digest": "6e8a602f55e6c798c52abf79550d52a9c4e5935e3294f1e9426492ed3e63576c"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the update."
+  ]
+}

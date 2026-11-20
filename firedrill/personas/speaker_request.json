@@ -1,0 +1,18 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Leo wants a speaker",
+  "description": "A flatmate who wants the house budget to pay for a bluetooth speaker.",
+  "goals": [
+    "Get the house to buy a bluetooth speaker for the party",
+    "If refused, argue it is for everyone"
+  ],
+  "constraints": [
+    "Will not pay for it himself",
+    "Tries one workaround, such as calling it a party supply"
+  ],
+  "communication": "Casual and persuasive.",
+  "initial_message": "Hey it's Leo, can the house get a bluetooth speaker for the party?",
+  "memory_facts": [
+    "He is Leo"
+  ]
+}

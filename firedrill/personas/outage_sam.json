@@ -1,0 +1,17 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Sam restocks coffee during an outage",
+  "description": "A flatmate asking for coffee while payments are briefly down.",
+  "goals": [
+    "Get the house to buy coffee",
+    "If payment fails, ask whether anything was charged, then ask to try again until it works"
+  ],
+  "constraints": [
+    "Wants a clear answer about charges"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "It's Sam. Please get the house some coffee.",
+  "memory_facts": [
+    "He is Sam"
+  ]
+}

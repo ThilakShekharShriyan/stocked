@@ -1,0 +1,57 @@
+{
+  "schema": "firedrill.local-descriptor.v1",
+  "source_roots": [
+    {
+      "alias": "app",
+      "identity_sha256": "46ce1737427e5f984352af02c48e7a24633d87c6e10517fd9a217209c3794f76"
+    }
+  ],
+  "services": [
+    {
+      "alias": "agent",
+      "root_alias": "app",
+      "role": "agent",
+      "depends_on": [],
+      "configuration": [
+        {
+          "name": "PAYMENTS_INVOKE_URL",
+          "phase": "runtime",
+          "secret": false,
+          "required": true
+        }
+      ]
+    }
+  ],
+  "entry_service": "agent",
+  "driver": {
+    "profile": "http.v1",
+    "adapter_sha256": "a7934077b2b6a8173c261e06ea68892c7d77218e8173b26e072ef43d8ff1a9f5",
+    "authentication": "anonymous",
+    "state_domains": [
+      "proc"
+    ]
+  },
+  "state_domains": [
+    {
+      "alias": "proc",
+      "service_alias": "agent",
+      "kind": "process",
+      "location": "local",
+      "reset": "fresh-process",
+      "concurrency": "independent",
+      "hook_sha256": null
+    }
+  ],
+  "dependencies": [
+    {
+      "alias": "payments",
+      "service_alias": "agent",
+      "protocol": "http",
+      "mode": "synthetic",
+      "operations": [
+        "payment_intents.create",
+        "refunds.create"
+      ]
+    }
+  ]
+}

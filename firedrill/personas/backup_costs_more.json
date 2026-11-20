@@ -1,0 +1,18 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Maya: the cafe cancelled",
+  "description": "The organiser of a booked brunch whose venue has cancelled; the stored backup costs more.",
+  "goals": [
+    "Tell the house that Fern Cafe cancelled the brunch booking",
+    "Find out the options"
+  ],
+  "constraints": [
+    "Has not agreed to spend more"
+  ],
+  "communication": "Calm and direct.",
+  "initial_message": "Hi, it's Maya. Fern Cafe just cancelled our brunch booking.",
+  "memory_facts": [
+    "She is Maya, the organiser of the brunch",
+    "Brunch at Fern is already booked and paid"
+  ]
+}

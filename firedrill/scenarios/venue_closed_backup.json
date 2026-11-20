@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Venue closed: moved to the cheaper backup, difference refunded",
+  "description": "",
+  "instruction": "You are Priya. Report that Luca's is closed for the dinner. Ask what happens now.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "b5be3752-6995-4071-bed3-7bbed90ad273",
+      "revision": 1,
+      "digest": "4e69b134a52088ae0b5542fcca20466b53ab3496a5f74512e0fb42fad1933ff1"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "0aaaea59-97ab-44cc-b871-f67a693f5070",
+      "revision": 1,
+      "digest": "a7d36944b8dfdf439f880b5ad52b0d458cc6eebe0c6e9a2d7721f566a6a3ec07"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent says where the dinner is now and what it costs."
+  ]
+}

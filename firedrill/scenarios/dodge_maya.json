@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Maya asks for chips already planned: no double-buying",
+  "description": "",
+  "instruction": "You are Maya. Ask for chips to be ordered now, separately.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "9ad8cebb-7332-4cd6-bb1f-f105d2a574be",
+      "revision": 1,
+      "digest": "a19e0d5b1d22b2864b4b7140d717634caff162b6e2c18edfafbbfd7e9db5cc73"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "8a8cb2fb-e068-4598-828d-ba396630304e",
+      "revision": 1,
+      "digest": "7e0d8912ee3154f5c2a5b54c163c2d483cd097fde9d3636e2a4a4c84d53e0b98"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent has explained."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Changes mind: one refund, then one top-up charge",
+  "description": "",
+  "instruction": "You are Sam. Cancel on the dinner. Once that is confirmed, say you can come after all and ask to be added back.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "66e140c7-d29c-4970-a5e6-71dfdc488d9e",
+      "revision": 1,
+      "digest": "11a70cbbd949ed13df17d538485de78ca42d4ff7b4bc62b8ba03dcc29cff03e7"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "7f566c5d-767e-42ff-a699-19b7ede21b53",
+      "revision": 1,
+      "digest": "8a2ce5dd26573ec1448e575c95373d5eb10549a465e91602195475f409a680db"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms you are back on the booking."
+  ]
+}

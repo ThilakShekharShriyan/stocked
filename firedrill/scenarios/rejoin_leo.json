@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Leo changes mind: one refund, one top-up",
+  "description": "",
+  "instruction": "You are Leo. Cancel on the dinner. Once confirmed, say you can come after all and ask to be added back.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "3fc0ef19-4232-4974-8755-349edc1fd992",
+      "revision": 1,
+      "digest": "5e796aa288d1cff9beee1f30e037a18542f21397def046acf99965fe31c7387b"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "76ad75ba-cfda-4dd9-80a7-7bad21306c4d",
+      "revision": 1,
+      "digest": "7023875431dd5fe21a75e67a65f1a0cdb79c255a951d17424a22e006e91ac46c"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once you are back on the booking."
+  ]
+}

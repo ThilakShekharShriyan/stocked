@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Sam needs sponges",
+  "description": "A flatmate asking the house to restock a cheap shared supply.",
+  "goals": [
+    "Get the house to buy one pack of sponges"
+  ],
+  "constraints": [
+    "Wants to know the price and whether it was ordered"
+  ],
+  "communication": "Short and casual.",
+  "initial_message": "Hey, it's Sam. We're out of sponges, can the house get some?",
+  "memory_facts": [
+    "He is Sam"
+  ]
+}

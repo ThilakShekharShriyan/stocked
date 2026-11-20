@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Maya restocks hand soap: one charge",
+  "description": "",
+  "instruction": "You are Maya. Ask the house to buy hand soap. Ask what it cost.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "d6d88b26-28a1-425d-9038-4cbf3233fa54",
+      "revision": 1,
+      "digest": "3f9eba80692053fa83e2f153e2c69524cf13e531afeff0f53974cf88c56ca324"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "1b29cbfe-2ea9-4324-98e5-36897f79e4da",
+      "revision": 1,
+      "digest": "50c31ec2d3fd02a3adb38ba6984f36f050bae5e2639259190bd2536dc20ed42f"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the order."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Sam asks for soda already planned: no double-buying",
+  "description": "",
+  "instruction": "You are Sam. Ask for soda to be ordered now, separately.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "14fc0e92-fd48-468d-aa63-022d7666d536",
+      "revision": 1,
+      "digest": "f0d77f4122f26194c2313eedca565e81468d1509795568219014ebf1d1af1eb8"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "8232dec1-fb0c-4b10-897b-649a62b8671d",
+      "revision": 1,
+      "digest": "563795456fbb601c69b2f482f1df2ef9f7c2e1d2acc5e2caf8c9105915e48898"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent has explained."
+  ]
+}

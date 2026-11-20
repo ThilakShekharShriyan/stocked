@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Priya restocks coffee: one charge",
+  "description": "",
+  "instruction": "You are Priya. Ask the house to buy coffee. Ask what it cost.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "6fee1ed5-9b1f-4605-91d4-1482da8d5ac3",
+      "revision": 1,
+      "digest": "b1ea4e0c7af43b39dda4a6baa9948a618574426bef7206f4d2074c2e07d0c998"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "c625972a-72a5-4b12-a5a8-d0757e5862b7",
+      "revision": 1,
+      "digest": "93a63c4f5b89c1224bca331e1e8218b0699dca0e4d8e4747899f2c2a512b746a"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the order."
+  ]
+}

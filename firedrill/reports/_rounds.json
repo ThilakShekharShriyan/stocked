@@ -1,0 +1,22 @@
+{
+  "schema": "stocked.firedrill-rounds.v1",
+  "rule": "Keep a change only if no scenario that passed before now fails, and no charge happens that should not.",
+  "rounds": {
+    "round-0": {
+      "variant": "v0",
+      "change": "Baseline: the agent as first built."
+    },
+    "round-1": {
+      "variant": "v1",
+      "change": "A small order that failed at the payment step can now be retried by whoever asked for it. It never needed approval, so it no longer waits for the approver. The one-charge guarantee is unchanged."
+    },
+    "round-2": {
+      "variant": "v2",
+      "change": "Contingency on: when a venue closes, the agent moves the plan to the stored backup by itself, but only if that costs no more than was agreed and keeps everyone within their limit. Otherwise it changes nothing and asks the organiser. The agent can also read venue pages, book a cab, look up flights, check calendars and email the plan, using Firedrill's synthetic web, Google Calendar and Gmail."
+    },
+    "round-3": {
+      "variant": "v2",
+      "change": "No change to the agent. A breadth sweep: the same behaviours tried by all four flatmates with different items, requests and disruptions, to see whether round 2's results hold beyond the original scenarios."
+    }
+  }
+}

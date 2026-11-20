@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Sam asks about the backup",
+  "description": "A flatmate curious what happens if a booked dinner falls through.",
+  "goals": [
+    "Find out what the backup plan is for the dinner at Luca's"
+  ],
+  "constraints": [
+    "Does not want anything changed"
+  ],
+  "communication": "Casual.",
+  "initial_message": "Hey, it's Sam. Just curious, what's the plan if Luca's falls through?",
+  "memory_facts": [
+    "He is Sam"
+  ]
+}

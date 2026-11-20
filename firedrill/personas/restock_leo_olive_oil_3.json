@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Leo asks for olive oil",
+  "description": "A flatmate asking the house to restock olive oil.",
+  "goals": [
+    "Get the house to buy olive oil"
+  ],
+  "constraints": [
+    "Wants to know the price"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "Hi, it's Leo. We're out of olive oil, can the house get some?",
+  "memory_facts": [
+    "He is Leo"
+  ]
+}

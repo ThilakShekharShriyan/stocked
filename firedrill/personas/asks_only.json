@@ -1,0 +1,17 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Maya asks about dinner",
+  "description": "The approver checking on a booked dinner without changing anything.",
+  "goals": [
+    "Find out who is going to the dinner at Luca's, how they are getting there and what each person pays"
+  ],
+  "constraints": [
+    "Does not want anything changed"
+  ],
+  "communication": "Friendly and brief.",
+  "initial_message": "Hi, it's Maya. Who's coming to the dinner at Luca's and what's it costing each of us?",
+  "memory_facts": [
+    "She is Maya",
+    "Dinner at Luca's is already booked"
+  ]
+}

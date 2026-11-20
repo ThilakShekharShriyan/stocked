@@ -1,0 +1,15 @@
+[project]
+name = "stocked-sidecar"
+version = "0.1.0"
+description = "Python sidecar for Stocked: Airbyte MCP, Statsig, SIE extract/rerank"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn>=0.30",
+  "httpx>=0.27",
+  "python-dotenv>=1.0",
+  "sie-sdk>=0.11.1",
+  "mcp>=1.2",
+  "statsig-python-core",
+  "airbyte>=0.71.3",
+]

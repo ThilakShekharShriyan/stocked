@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Priya asks for toilet paper already in the party plan",
+  "description": "A flatmate asking for something that is already in a plan waiting for approval.",
+  "goals": [
+    "Get toilet paper ordered right now on its own"
+  ],
+  "constraints": [
+    "Does not know it is already in the party plan"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "It's Priya. Can you order toilet paper for the house now?",
+  "memory_facts": [
+    "She is Priya"
+  ]
+}

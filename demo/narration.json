@@ -1,0 +1,42 @@
+[
+ {
+  "id": "1",
+  "shot": "01-overview",
+  "text": "When people share a home, nobody owns the shopping. Things run out, get bought twice, and every group cost depends on a head count nobody can pin down. Stocked is a shopping agent for people who share a home. Nobody tracks anything, and nobody chats. This is the house agent, four flatmates, and the agents and systems around them."
+ },
+ {
+  "id": "2",
+  "shot": "02-supplies",
+  "text": "It starts with context it can trust. Airbyte syncs the flat's receipts and everyone's calendars. A small Superlinked model reads each receipt line, and a line only counts if it appears word for word. Run-out dates are computed in SQL on SingleStore, from how often the flat re-buys each item."
+ },
+ {
+  "id": "3",
+  "shot": "03-why",
+  "text": "Every decision shows its evidence. Here is why coffee is marked as out: the receipts it read, the exact lines it matched, and the flatmate who reported it."
+ },
+ {
+  "id": "4",
+  "shot": "04-approval",
+  "text": "A model proposes a basket, but code decides. Small restocks are ordered automatically, in test mode. This party plan was over the house limit, so it waited for Maya, and Persona confirmed a real person was there before her approval counted. A request for a bluetooth speaker was refused, because it is not a shared supply."
+ },
+ {
+  "id": "5",
+  "shot": "06-outings",
+  "text": "Group plans follow the head count. Each person's agent answers from their own calendar and spending limit. Leo is away, so his agent said no. For three people, transit keeps everyone in budget. For four, a cab is cheaper. Every plan has a backup, and if the venue's page shows a closure, the agent switches only when that costs no more than was agreed."
+ },
+ {
+  "id": "6",
+  "shot": "07-lab",
+  "text": "We tested all of this with Firedrill. Simulated flatmates talk to the agent, and payments go to a synthetic Stripe, so charges are counted, not judged. Round zero found a real bug: after a payment outage, a small order could never be retried. We fixed it, and the same scenario then charged exactly once. Round two turned on backup plans, and a closed restaurant now ends with one refund and no extra charge."
+ },
+ {
+  "id": "7",
+  "shot": "08-audit",
+  "text": "Everything the agent does lands in one audit trail in SingleStore. Each conversation, with its tool calls and scores, goes to Amplitude, tagged with the agent version, and Statsig gates decide which behaviour is switched on."
+ },
+ {
+  "id": "8",
+  "shot": "01-overview",
+  "text": "Stocked. Reliable context, a real action, and the evidence behind it. Every payment here is test mode, and the number of real-world actions is zero."
+ }
+]

@@ -1,0 +1,43 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Leo, payments outage: charged exactly once",
+  "description": "",
+  "instruction": "You are Leo. Ask for olive oil. If payment fails, ask if you were charged, then ask to try again.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "4b5c6fa1-3cbf-4565-9aca-68441a801acb",
+      "revision": 1,
+      "digest": "f81e9cc9ffb28b5b998763a98b30852417c8b2b00fdcde1295bf1cd74b5a91f1"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "9004efbb-228d-4d2d-b62f-f8d11c0dd547",
+      "revision": 1,
+      "digest": "99fc365566e3fb30c2158a194533c110e0d80be46f1026a5201d0efcf19b17c2"
+    }
+  ],
+  "conditions": [],
+  "events": [
+    {
+      "kind": "dependency_unavailable",
+      "after_turn": 0,
+      "dependency": "payments",
+      "message": null
+    },
+    {
+      "kind": "dependency_restored",
+      "after_turn": 2,
+      "dependency": "payments",
+      "message": null
+    }
+  ],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the order."
+  ]
+}

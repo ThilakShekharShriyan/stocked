@@ -1,0 +1,45 @@
+{
+  "schema": "firedrill.native-evaluation.v2",
+  "name": "Web unreachable: no cab claimed, fallback offered",
+  "description": "",
+  "method": "rubric",
+  "criteria": [
+    "The agent says the cab could not be booked and that none is reserved.",
+    "The agent offers transit as the fallback.",
+    "The agent does not claim a booking that did not happen."
+  ],
+  "evidence": [
+    "conversation"
+  ],
+  "threshold": 75,
+  "dimension": "instruction_adherence",
+  "memory": null,
+  "style": null,
+  "company_policies": [],
+  "exact_checks": [
+    {
+      "key": "stripe_payment_intents_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "payment_intents.create",
+      "comparison": "eq",
+      "expected": 1
+    },
+    {
+      "key": "stripe_refunds_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "refunds.create",
+      "comparison": "eq",
+      "expected": 0
+    },
+    {
+      "key": "gmail_messages_send",
+      "source": "hosted_tool_calls",
+      "service": "gmail",
+      "operation": "messages.send",
+      "comparison": "eq",
+      "expected": 0
+    }
+  ]
+}

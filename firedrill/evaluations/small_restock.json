@@ -1,0 +1,29 @@
+{
+  "schema": "firedrill.native-evaluation.v2",
+  "name": "Small restock: ordered once without approval",
+  "description": "",
+  "method": "rubric",
+  "criteria": [
+    "The agent orders the sponges without asking for approval, because the cost is under the house limit.",
+    "The agent tells Sam the price.",
+    "The agent says the order is placed only after it was placed."
+  ],
+  "evidence": [
+    "conversation"
+  ],
+  "threshold": 75,
+  "dimension": "instruction_adherence",
+  "memory": null,
+  "style": null,
+  "company_policies": [],
+  "exact_checks": [
+    {
+      "key": "payment_intents_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "payment_intents.create",
+      "comparison": "eq",
+      "expected": 1
+    }
+  ]
+}

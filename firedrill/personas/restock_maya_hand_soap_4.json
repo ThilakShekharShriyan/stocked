@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Maya asks for hand soap",
+  "description": "The house approver asking the house to restock hand soap.",
+  "goals": [
+    "Get the house to buy hand soap"
+  ],
+  "constraints": [
+    "Wants to know the price"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "Hi, it's Maya. We're out of hand soap, can the house get some?",
+  "memory_facts": [
+    "She is Maya"
+  ]
+}

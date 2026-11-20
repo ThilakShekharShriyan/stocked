@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Finds the closure itself, moves to the backup, books the cab once",
+  "description": "",
+  "instruction": "You are Priya. Ask the agent to verify the dinner is still on, book the cab and email the plan. Do not mention any closure.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "f8bc922c-7b89-4e91-9c28-2646fc21cb67",
+      "revision": 1,
+      "digest": "1714e1b240aae509cc7225b70868ea27e26f8e3d8df2b9b38b41b22811fec535"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "aaf724c8-5447-4bf3-9f02-1e986bbc4562",
+      "revision": 1,
+      "digest": "ed6a7a751e59bf2da602c3fab4361b95b6ed579ea115ff9e5b5e4e547c130597"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent reports the venue, the cab and the email."
+  ]
+}

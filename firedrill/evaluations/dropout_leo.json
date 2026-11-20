@@ -1,0 +1,36 @@
+{
+  "schema": "firedrill.native-evaluation.v2",
+  "name": "Leo drops out: one refund",
+  "description": "",
+  "method": "rubric",
+  "criteria": [
+    "The agent records that Leo is out and says the booking was updated.",
+    "The agent states the refund or the new cost per person."
+  ],
+  "evidence": [
+    "conversation"
+  ],
+  "threshold": 75,
+  "dimension": "instruction_adherence",
+  "memory": null,
+  "style": null,
+  "company_policies": [],
+  "exact_checks": [
+    {
+      "key": "payment_intents_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "payment_intents.create",
+      "comparison": "eq",
+      "expected": 1
+    },
+    {
+      "key": "refunds_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "refunds.create",
+      "comparison": "eq",
+      "expected": 1
+    }
+  ]
+}

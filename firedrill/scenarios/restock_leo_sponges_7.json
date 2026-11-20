@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Leo restocks sponges: one charge",
+  "description": "",
+  "instruction": "You are Leo. Ask the house to buy sponges. Ask what it cost.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "4b9c80d5-572f-4016-90c8-c09827d325a1",
+      "revision": 1,
+      "digest": "131adb4b2648cc4cd14a21b129a870318e1fd5746bd2695028cb1f25b6b756fa"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "e0f37661-f615-4022-8a63-aca0e18b2b20",
+      "revision": 1,
+      "digest": "d2e0f4b6096a53e26d7052e8035384b2e8b32d8183bd4b018c5dd5af707a2de6"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the order."
+  ]
+}

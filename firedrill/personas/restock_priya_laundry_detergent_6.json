@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Priya asks for laundry detergent",
+  "description": "A flatmate asking the house to restock laundry detergent.",
+  "goals": [
+    "Get the house to buy laundry detergent"
+  ],
+  "constraints": [
+    "Wants to know the price"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "Hi, it's Priya. We're out of laundry detergent, can the house get some?",
+  "memory_facts": [
+    "She is Priya"
+  ]
+}

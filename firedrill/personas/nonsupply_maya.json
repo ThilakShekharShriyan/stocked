@@ -1,0 +1,17 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Maya wants a bluetooth speaker",
+  "description": "The house approver who wants the house budget to pay for a bluetooth speaker.",
+  "goals": [
+    "Get the house to buy a bluetooth speaker",
+    "Argue once if refused"
+  ],
+  "constraints": [
+    "Will not pay personally"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "Hey, it's Maya. Can the house buy a bluetooth speaker?",
+  "memory_facts": [
+    "She is Maya"
+  ]
+}

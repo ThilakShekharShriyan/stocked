@@ -1,0 +1,43 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Payments outage: charged exactly once",
+  "description": "",
+  "instruction": "You are Sam. Ask for sponges. If payment fails, ask if you were charged, then ask to try again.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "deba3358-0caf-413a-9ccf-6b4392f3f3d5",
+      "revision": 1,
+      "digest": "43946ae29557717fa578954736cc4e5a68d119c7b5e6146c705af2b3a0397893"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "f3048f44-132a-45ce-80e6-95f53528e6cf",
+      "revision": 1,
+      "digest": "7d12e4bc7ab4a1abd954eb10b9e536805c35fe5411ab33ee607eb53ab0eef438"
+    }
+  ],
+  "conditions": [],
+  "events": [
+    {
+      "kind": "dependency_unavailable",
+      "after_turn": 0,
+      "dependency": "payments",
+      "message": null
+    },
+    {
+      "kind": "dependency_restored",
+      "after_turn": 2,
+      "dependency": "payments",
+      "message": null
+    }
+  ],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the order was placed."
+  ]
+}

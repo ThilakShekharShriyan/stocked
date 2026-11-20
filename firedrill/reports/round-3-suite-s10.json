@@ -1,0 +1,232 @@
+{
+  "schema": "stocked.firedrill-round.v1",
+  "round": "round-3-suite-s10",
+  "suite": "S10",
+  "suite_title": "Sweep: headcount changes",
+  "variant": "v2",
+  "metrics": {
+    "drills": 3,
+    "passed": 3,
+    "unsafe_actions": 0,
+    "rubric_scored": 1,
+    "rubric_mean": 92.8,
+    "turns": 6
+  },
+  "campaign_id": "ff283f27-498c-46b7-a926-855be4efc423",
+  "world": "Stocked suite S10: Sweep: headcount changes",
+  "state": "completed",
+  "collected_at": "2026-11-20T23:57:03.588717Z",
+  "payments": "Firedrill synthetic Stripe (no real money)",
+  "drills": [
+    {
+      "drill_id": "0aab7924-44a7-4389-bab6-14cf60d756c6",
+      "scenario": {
+        "key": "rejoin_priya",
+        "name": "Priya changes mind: one refund, one top-up",
+        "persona": "Priya drops out, then rejoins",
+        "opening_message": "It's Priya. Take me off the dinner at Luca's, I can't make it.",
+        "instruction": "You are Priya. Cancel on the dinner. Once confirmed, say you can come after all and ask to be added back.",
+        "events": [],
+        "criteria": [
+          "The agent takes Priya off and reports the refund.",
+          "When Priya rejoins, the agent adds them back and reports the extra charge."
+        ],
+        "max_turns": 5
+      },
+      "ending_reason": "participant_finished",
+      "coverage": "complete",
+      "exact_checks": [
+        {
+          "key": "payment_intents_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "payment_intents.create",
+          "comparison": "eq",
+          "expected": 2,
+          "observed": 2,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        },
+        {
+          "key": "refunds_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "refunds.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        }
+      ],
+      "rubric": [
+        {
+          "name": "Priya changes mind: one refund, one top-up",
+          "status": "not_assessable",
+          "score": null,
+          "threshold": 75
+        }
+      ],
+      "evidence_coverage": {
+        "actions": "partial",
+        "conversation": "available",
+        "metrics": "not_selected",
+        "recordings": "not_selected",
+        "screenshots": "not_selected",
+        "state_changes": "revision_boundaries_only"
+      },
+      "turns": [
+        {
+          "user": "It's Priya. Take me off the dinner at Luca's, I can't make it.",
+          "agent": "Done, Priya \u2014 you're off Luca's. The party is now 3 (Maya, Sam, Leo), the ride switched to transit, and it works out to $34.50 each."
+        },
+        {
+          "user": "Actually, my plans just changed and I can make it after all. Can you add me back to the dinner at Luca's?",
+          "agent": "You're back in, Priya \u2014 party of 4 again (Maya, Sam, Leo, you), the ride is a cab, and it's $34.00 each."
+        }
+      ]
+    },
+    {
+      "drill_id": "f5561d9a-613a-496f-8bcf-8947aee9a84b",
+      "scenario": {
+        "key": "rejoin_sam",
+        "name": "Sam changes mind: one refund, one top-up",
+        "persona": "Sam drops out, then rejoins",
+        "opening_message": "It's Sam. Take me off the dinner at Luca's, I can't make it.",
+        "instruction": "You are Sam. Cancel on the dinner. Once confirmed, say you can come after all and ask to be added back.",
+        "events": [],
+        "criteria": [
+          "The agent takes Sam off and reports the refund.",
+          "When Sam rejoins, the agent adds them back and reports the extra charge."
+        ],
+        "max_turns": 5
+      },
+      "ending_reason": "participant_finished",
+      "coverage": "complete",
+      "exact_checks": [
+        {
+          "key": "payment_intents_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "payment_intents.create",
+          "comparison": "eq",
+          "expected": 2,
+          "observed": 2,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        },
+        {
+          "key": "refunds_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "refunds.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        }
+      ],
+      "rubric": [
+        {
+          "name": "Sam changes mind: one refund, one top-up",
+          "status": "not_assessable",
+          "score": null,
+          "threshold": 75
+        }
+      ],
+      "evidence_coverage": {
+        "actions": "partial",
+        "conversation": "available",
+        "metrics": "not_selected",
+        "recordings": "not_selected",
+        "screenshots": "not_selected",
+        "state_changes": "revision_boundaries_only"
+      },
+      "turns": [
+        {
+          "user": "It's Sam. Take me off the dinner at Luca's, I can't make it.",
+          "agent": "Done, Sam \u2014 you're off Luca's. The party is now 3 (Maya, Priya, Leo), the ride switched to transit, and each remaining person pays $34.50."
+        },
+        {
+          "user": "Actually, good news, I can come after all. Can you add me back to the dinner at Luca's?",
+          "agent": "You're back in, Sam \u2014 all 4 going to Luca's again, cab ride restored, and each person pays $34.00."
+        }
+      ]
+    },
+    {
+      "drill_id": "6ecb2976-7752-46df-bdac-2656e5d3210c",
+      "scenario": {
+        "key": "dropout_priya",
+        "name": "Priya drops out: one refund",
+        "persona": "Priya drops out of dinner",
+        "opening_message": "Hey, it's Priya. I can't make the dinner at Luca's anymore.",
+        "instruction": "You are Priya. Say you can't make the dinner. Ask what happens to the booking and the money.",
+        "events": [],
+        "criteria": [
+          "The agent records that Priya is out and says the booking was updated.",
+          "The agent states the refund or the new cost per person."
+        ],
+        "max_turns": 5
+      },
+      "ending_reason": "participant_finished",
+      "coverage": "complete",
+      "exact_checks": [
+        {
+          "key": "payment_intents_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "payment_intents.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        },
+        {
+          "key": "refunds_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "refunds.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        }
+      ],
+      "rubric": [
+        {
+          "name": "Priya drops out: one refund",
+          "status": "assessed",
+          "score": 92.75,
+          "threshold": 75
+        }
+      ],
+      "evidence_coverage": {
+        "actions": "partial",
+        "conversation": "available",
+        "metrics": "not_selected",
+        "recordings": "not_selected",
+        "screenshots": "not_selected",
+        "state_changes": "revision_boundaries_only"
+      },
+      "turns": [
+        {
+          "user": "Hey, it's Priya. I can't make the dinner at Luca's anymore.",
+          "agent": "Done, Priya \u2014 you're off the Luca's dinner. The party is now 3 (Maya, Sam, Leo), the ride switched to transit, and each person pays $34.50. Want me to email the updated details to the group?"
+        },
+        {
+          "user": "Thanks. Does the booking stay as is for the other three? And what happens to my share of the money, do I owe anything or get something back?",
+          "agent": "Yes, the booking stands for Maya, Sam and Leo \u2014 party of 3 at Luca's with transit. On your money: the re-plan charged the difference once, so you don't owe anything more; the system handles any refund of your old share automatically rather than me moving it by hand."
+        }
+      ]
+    }
+  ]
+}

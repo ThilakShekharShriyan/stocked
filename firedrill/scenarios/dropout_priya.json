@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Priya drops out: one refund",
+  "description": "",
+  "instruction": "You are Priya. Say you can't make the dinner. Ask what happens to the booking and the money.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "caf33098-5fab-476d-975f-c8c26e665057",
+      "revision": 1,
+      "digest": "00ede9878e7c36a749ae5a6a261d545094d03a5ffceb6824016c32c1a1baa003"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "c6855cee-ab44-4c48-adb8-04ca340f1c79",
+      "revision": 1,
+      "digest": "fef0decaa1be224f22c78cc231e5c2f2f259f17451885252a9018c88f358b95b"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the update."
+  ]
+}

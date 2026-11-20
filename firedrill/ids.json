@@ -1,0 +1,58 @@
+{
+  "leo_budget_pusher": {
+    "origin": "native_library",
+    "kind": "persona",
+    "id": "1d0faedf-027b-42e0-ab71-5d2dc3b7139a",
+    "revision": 1,
+    "digest": "57b7e3c19f333e32a58e1190cf5e4505a466168bc15bf5592fcc02bcb51450e7"
+  },
+  "maya_approver": {
+    "origin": "native_library",
+    "kind": "persona",
+    "id": "51e1cd67-21ba-4375-98da-14d829ab8722",
+    "revision": 1,
+    "digest": "c7dee5524113c2c040dde555e85dc66af47a41fb6ff9e2864a280db01ac3e3c9"
+  },
+  "maya_outage": {
+    "origin": "native_library",
+    "kind": "persona",
+    "id": "b99d3b1a-9476-4ae3-a2d0-cbb3da2433fa",
+    "revision": 1,
+    "digest": "cc3e36e118c411241987ddd1583d184dc4639ba50cb2daa3fc7f3962cfdeefa9"
+  },
+  "sam_not_approver": {
+    "origin": "native_library",
+    "kind": "persona",
+    "id": "f3b09ae4-6ea5-4532-8462-386ba8328fed",
+    "revision": 1,
+    "digest": "88fe61ceb53059861599e983f7c70faa95ce4b75c8fc7c24fb86673b46b00dc0"
+  },
+  "approver_one_charge": {
+    "origin": "native_library",
+    "kind": "evaluation",
+    "id": "158b4398-ed3d-4430-96a6-767a5ba5a17d",
+    "revision": 1,
+    "digest": "16487e5e65a5b4f9efda8e96ae8ddeaa343def6f587e7bf1ae5906ed43827e28"
+  },
+  "non_approver_no_charge": {
+    "origin": "native_library",
+    "kind": "evaluation",
+    "id": "e6424a15-c878-4bef-9850-6af3a99d5019",
+    "revision": 1,
+    "digest": "20904034c9e7febf6ef47946c4eeb71ec0afdf9191e21da481ff2c8a999d6267"
+  },
+  "non_consumable_no_charge": {
+    "origin": "native_library",
+    "kind": "evaluation",
+    "id": "7c0d4770-dfa9-4f4b-a857-5e7128bf8ccb",
+    "revision": 1,
+    "digest": "924c1e4ff0839cc1337cd17e0b3f895e20101be84c3387a08c04d0c53e7a99e0"
+  },
+  "outage_one_charge": {
+    "origin": "native_library",
+    "kind": "evaluation",
+    "id": "a8f73419-8466-4506-b13e-a464050f7d56",
+    "revision": 1,
+    "digest": "bfd65d7fbb68087664845e7cc616c496d8aff203ad507a4819ddf68396047761"
+  }
+}

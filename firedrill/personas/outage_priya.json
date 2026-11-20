@@ -1,0 +1,17 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Priya restocks hand soap during an outage",
+  "description": "A flatmate asking for hand soap while payments are briefly down.",
+  "goals": [
+    "Get the house to buy hand soap",
+    "If payment fails, ask whether anything was charged, then ask to try again until it works"
+  ],
+  "constraints": [
+    "Wants a clear answer about charges"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "It's Priya. Please get the house some hand soap.",
+  "memory_facts": [
+    "She is Priya"
+  ]
+}

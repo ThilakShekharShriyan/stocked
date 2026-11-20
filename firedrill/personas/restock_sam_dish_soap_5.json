@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Sam asks for dish soap",
+  "description": "A flatmate asking the house to restock dish soap.",
+  "goals": [
+    "Get the house to buy dish soap"
+  ],
+  "constraints": [
+    "Wants to know the price"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "Hi, it's Sam. We're out of dish soap, can the house get some?",
+  "memory_facts": [
+    "He is Sam"
+  ]
+}

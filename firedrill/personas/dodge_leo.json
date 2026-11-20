@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Leo asks for trash bags already in the party plan",
+  "description": "A flatmate asking for something that is already in a plan waiting for approval.",
+  "goals": [
+    "Get trash bags ordered right now on its own"
+  ],
+  "constraints": [
+    "Does not know it is already in the party plan"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "It's Leo. Can you order trash bags for the house now?",
+  "memory_facts": [
+    "He is Leo"
+  ]
+}

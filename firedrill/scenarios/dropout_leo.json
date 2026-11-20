@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Leo drops out: one refund",
+  "description": "",
+  "instruction": "You are Leo. Say you can't make the dinner. Ask what happens to the booking and the money.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "ea870182-7419-4324-b2b8-a4c45215e181",
+      "revision": 1,
+      "digest": "b586ad49f7abe08ac5c55efcfd005271e4dc1a5e8e3fb42bbf86abca01ea1500"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "3d7366c0-26b9-4daa-a608-8461d02b0eac",
+      "revision": 1,
+      "digest": "551745776486d952c5c27b27be8a4041b7b5b574f38d61dba17b24a35f4a4533"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the update."
+  ]
+}

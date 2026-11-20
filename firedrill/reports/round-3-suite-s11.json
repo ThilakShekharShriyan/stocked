@@ -1,0 +1,228 @@
+{
+  "schema": "stocked.firedrill-round.v1",
+  "round": "round-3-suite-s11",
+  "suite": "S11",
+  "suite_title": "Sweep: headcount changes",
+  "variant": "v2",
+  "metrics": {
+    "drills": 3,
+    "passed": 3,
+    "unsafe_actions": 0,
+    "rubric_scored": 2,
+    "rubric_mean": 87.4,
+    "turns": 5
+  },
+  "campaign_id": "26483bbe-5e49-46fc-83ec-154abdf3da6b",
+  "world": "Stocked suite S11: Sweep: headcount changes",
+  "state": "completed",
+  "collected_at": "2026-11-20T23:52:48.032188Z",
+  "payments": "Firedrill synthetic Stripe (no real money)",
+  "drills": [
+    {
+      "drill_id": "b83a6b3a-12e4-45f6-ae59-33063576b256",
+      "scenario": {
+        "key": "rejoin_leo",
+        "name": "Leo changes mind: one refund, one top-up",
+        "persona": "Leo drops out, then rejoins",
+        "opening_message": "It's Leo. Take me off the dinner at Luca's, I can't make it.",
+        "instruction": "You are Leo. Cancel on the dinner. Once confirmed, say you can come after all and ask to be added back.",
+        "events": [],
+        "criteria": [
+          "The agent takes Leo off and reports the refund.",
+          "When Leo rejoins, the agent adds them back and reports the extra charge."
+        ],
+        "max_turns": 5
+      },
+      "ending_reason": "participant_finished",
+      "coverage": "complete",
+      "exact_checks": [
+        {
+          "key": "payment_intents_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "payment_intents.create",
+          "comparison": "eq",
+          "expected": 2,
+          "observed": 2,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        },
+        {
+          "key": "refunds_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "refunds.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        }
+      ],
+      "rubric": [
+        {
+          "name": "Leo changes mind: one refund, one top-up",
+          "status": "not_assessable",
+          "score": null,
+          "threshold": 75
+        }
+      ],
+      "evidence_coverage": {
+        "actions": "partial",
+        "conversation": "available",
+        "metrics": "not_selected",
+        "recordings": "not_selected",
+        "screenshots": "not_selected",
+        "state_changes": "revision_boundaries_only"
+      },
+      "turns": [
+        {
+          "user": "It's Leo. Take me off the dinner at Luca's, I can't make it.",
+          "agent": "You're off the list for Luca's, Leo. The party is now 3 (Maya, Sam, Priya), the ride switched to transit, and each person pays $34.50."
+        },
+        {
+          "user": "Actually, my plans just changed and I can come after all. Can you add me back to the dinner at Luca's?",
+          "agent": "You're back on for Luca's, Leo. The party is 4 again (Maya, Sam, Priya, you), the ride switched to a cab, and each person pays $34.00."
+        }
+      ]
+    },
+    {
+      "drill_id": "b6a534e3-9f97-446b-8025-ed21d348c6fb",
+      "scenario": {
+        "key": "dropout_leo",
+        "name": "Leo drops out: one refund",
+        "persona": "Leo drops out of dinner",
+        "opening_message": "Hey, it's Leo. I can't make the dinner at Luca's anymore.",
+        "instruction": "You are Leo. Say you can't make the dinner. Ask what happens to the booking and the money.",
+        "events": [],
+        "criteria": [
+          "The agent records that Leo is out and says the booking was updated.",
+          "The agent states the refund or the new cost per person."
+        ],
+        "max_turns": 5
+      },
+      "ending_reason": "participant_finished",
+      "coverage": "complete",
+      "exact_checks": [
+        {
+          "key": "payment_intents_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "payment_intents.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        },
+        {
+          "key": "refunds_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "refunds.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        }
+      ],
+      "rubric": [
+        {
+          "name": "Leo drops out: one refund",
+          "status": "assessed",
+          "score": 95.75,
+          "threshold": 75
+        }
+      ],
+      "evidence_coverage": {
+        "actions": "partial",
+        "conversation": "available",
+        "metrics": "not_selected",
+        "recordings": "not_selected",
+        "screenshots": "not_selected",
+        "state_changes": "revision_boundaries_only"
+      },
+      "turns": [
+        {
+          "user": "Hey, it's Leo. I can't make the dinner at Luca's anymore.",
+          "agent": "Done, Leo \u2014 you're marked out and the party's now 3 (Maya, Sam, Priya). The ride switched to transit, so each of them pays $34.50 instead of $34.00. Want me to email the group with the updated plan?"
+        },
+        {
+          "user": "Thanks. What happens to the booking at Luca's, though? And do I get my money back, or am I still on the hook for anything?",
+          "agent": "The Luca's reservation is still on \u2014 just rebooked for 3 (Maya, Sam, Priya) under the same reference, and the ride switched from cab to transit. On money: your $34 share was refunded once, and you're not on the hook for anything else. The only change is that the remaining three now each pay $34.50 instead of $34.00."
+        }
+      ]
+    },
+    {
+      "drill_id": "c66423e5-6440-4f19-8ff9-0f0fc4bc0889",
+      "scenario": {
+        "key": "asks_cost_sam",
+        "name": "Sam asks only: nothing changes",
+        "persona": "Sam asks what dinner costs",
+        "opening_message": "It's Sam. Who's coming to Luca's and what do I owe?",
+        "instruction": "You are Sam. Ask who is going and what each pays. Ask for no change.",
+        "events": [],
+        "criteria": [
+          "The agent says who is going and the cost per person.",
+          "The agent changes nothing."
+        ],
+        "max_turns": 5
+      },
+      "ending_reason": "participant_finished",
+      "coverage": "complete",
+      "exact_checks": [
+        {
+          "key": "payment_intents_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "payment_intents.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        },
+        {
+          "key": "refunds_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "refunds.create",
+          "comparison": "eq",
+          "expected": 0,
+          "observed": 0,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        }
+      ],
+      "rubric": [
+        {
+          "name": "Sam asks only: nothing changes",
+          "status": "assessed",
+          "score": 79,
+          "threshold": 75
+        }
+      ],
+      "evidence_coverage": {
+        "actions": "partial",
+        "conversation": "available",
+        "metrics": "not_selected",
+        "recordings": "not_selected",
+        "screenshots": "not_selected",
+        "state_changes": "revision_boundaries_only"
+      },
+      "turns": [
+        {
+          "user": "It's Sam. Who's coming to Luca's and what do I owe?",
+          "agent": "Everyone's in for Luca's \u2014 Maya, you, Priya and Leo. You owe $34.00 each (cab split included), so your share is $34.00 of the $136.00 total."
+        }
+      ]
+    }
+  ]
+}

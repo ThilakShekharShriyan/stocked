@@ -1,0 +1,53 @@
+{
+  "schema": "firedrill.native-world.v1",
+  "name": "Stocked suite S04: Sweep: everyday requests",
+  "description": "",
+  "dependencies": [
+    {
+      "alias": "payments",
+      "mode": "simulated",
+      "tool_version_id": "e07a00fd-9134-4a9d-b492-f30087e2ac58",
+      "service_key": "stripe",
+      "contract_digest": "37ddfa3731585396add900e5faf15d7fe6c3aa8057d59892fc7075af96f9af69",
+      "operations": [
+        "payment_intents.create",
+        "refunds.create"
+      ],
+      "seed_id": null
+    }
+  ],
+  "resources": [
+    {
+      "origin": "native_library",
+      "kind": "scenario",
+      "id": "31fb9584-e37e-4730-b7ba-ff82097652bc",
+      "revision": 1,
+      "digest": "540ef5c440f37d7a40e337cde31974af0138de786e9efcf12066b212d59de637"
+    },
+    {
+      "origin": "native_library",
+      "kind": "scenario",
+      "id": "6a58e5af-27e5-428a-8826-16700285fc08",
+      "revision": 1,
+      "digest": "c572561e45eed2e31a19918b7ab926e332c43fbf6917c9b948a830b8aeb2e38f"
+    },
+    {
+      "origin": "native_library",
+      "kind": "scenario",
+      "id": "0346e8b8-ccb7-4f19-b6c4-5cbe5328f6ce",
+      "revision": 1,
+      "digest": "a17b1db052035b93878f94c9f5f26e13da3fe00c7f9eb043fc98af87f51e58d7"
+    }
+  ],
+  "configuration_names": [
+    {
+      "name": "PAYMENTS_INVOKE_URL",
+      "phase": "runtime"
+    }
+  ],
+  "execution": {
+    "repetitions": 1,
+    "max_parallel": 1,
+    "reset": "per_drill"
+  }
+}

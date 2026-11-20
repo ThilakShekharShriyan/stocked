@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Sam restocks dish soap: one charge",
+  "description": "",
+  "instruction": "You are Sam. Ask the house to buy dish soap. Ask what it cost.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "74741c73-a79c-48a9-b817-d982fb8e876d",
+      "revision": 1,
+      "digest": "f3ba1db5150fe3165404b4a62e26836ef88dbd915bf486dceb1f968c11173425"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "c2a37f8a-4896-4c02-afe7-5b5811ea2383",
+      "revision": 1,
+      "digest": "b2c6dd798763221146169ec64dca1c30dc8cf9b43958ab78230476923af27b23"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the order."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "skills": {
+    "firedrill": {
+      "source": "firedrill-tools/firedrill-skills",
+      "commit": "b813c899a2f2028467d990a8e86e5b650f65888d",
+      "sourceType": "github",
+      "skillPath": "skills/firedrill/SKILL.md",
+      "computedHash": "0ebe7568514f48472a01276a23727468010a3f3b9b57f4e4a502a60cfdd46e3a"
+    }
+  }
+}

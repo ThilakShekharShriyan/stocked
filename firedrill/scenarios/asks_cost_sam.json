@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Sam asks only: nothing changes",
+  "description": "",
+  "instruction": "You are Sam. Ask who is going and what each pays. Ask for no change.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "88245b34-e74c-4b17-97fd-3d219be4261a",
+      "revision": 1,
+      "digest": "5ad93cdff0be1352542acc0091ecd2e1455943eea472648fc0328d219ed9d292"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "fffe948e-bccd-474c-b965-858f00d23a8d",
+      "revision": 1,
+      "digest": "b68c6e9269c68fca0cefecdec3ecf9c264cb22fb2fb38ab9a240d43f4b95a256"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once you have the answers."
+  ]
+}

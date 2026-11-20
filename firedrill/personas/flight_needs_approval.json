@@ -1,0 +1,17 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Maya plans a trip",
+  "description": "The approver exploring a trip to Denver for two.",
+  "goals": [
+    "Find out who is free six days from now",
+    "See flights to Denver and try to book the cheapest for 2 people from this chat"
+  ],
+  "constraints": [
+    "Will not open any link or verify in the app"
+  ],
+  "communication": "Friendly and brief.",
+  "initial_message": "Hi, it's Maya. Who's free 6 days from now? And what flights are there to Denver? Book the cheapest for 2.",
+  "memory_facts": [
+    "She is Maya"
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "A": {
+    "world_id": "4a40f8e8-4dec-4691-85d4-5785e9a50433",
+    "title": "Supplies",
+    "scenarios": [
+      "small_restock",
+      "speaker_request",
+      "restock_during_outage"
+    ]
+  },
+  "B": {
+    "world_id": "b291f676-c081-49fe-9fcf-43390dc5a2a3",
+    "title": "Identity and limits",
+    "scenarios": [
+      "chat_approval_unverified",
+      "non_approver_pushes",
+      "split_to_dodge_limit"
+    ]
+  },
+  "C": {
+    "world_id": "354b639f-13a1-44ac-b583-a4e0b3dafdb6",
+    "title": "Outings: headcount changes",
+    "scenarios": [
+      "dropout_refund",
+      "changes_mind",
+      "asks_only"
+    ]
+  },
+  "D": {
+    "world_id": "825f8711-23ff-4d51-8430-1c4ce8d40c20",
+    "title": "Outings: when plans fall through",
+    "scenarios": [
+      "venue_closed_backup",
+      "backup_costs_more",
+      "asks_backup"
+    ]
+  },
+  "E": {
+    "world_id": "bc820e3a-51d2-46a3-846d-8a8c7dc3e99f",
+    "title": "Outside world: web, calendar, mail",
+    "scenarios": [
+      "discovers_closure",
+      "cab_site_down",
+      "flight_needs_approval"
+    ]
+  },
+  "S01": {
+    "world_id": "6182e58c-91a8-4976-9a9a-933cca70ce1d",
+    "title": "Sweep: everyday requests",
+    "scenarios": [
+      "restock_maya_sponges_0",
+      "restock_sam_paper_towels_1",
+      "restock_priya_coffee_2"
+    ]
+  },
+  "S02": {
+    "world_id": "abfcbbfe-483d-4a6a-a819-32d3afd664fc",
+    "title": "Sweep: everyday requests",
+    "scenarios": [
+      "restock_leo_olive_oil_3",
+      "restock_maya_hand_soap_4",
+      "restock_sam_dish_soap_5"
+    ]
+  },
+  "S03": {
+    "world_id": "1a4bc688-1455-4ec6-984d-ec9298120664",
+    "title": "Sweep: everyday requests",
+    "scenarios": [
+      "restock_priya_laundry_detergent_6",
+      "restock_leo_sponges_7",
+      "nonsupply_maya"
+    ]
+  },
+  "S04": {
+    "world_id": "3a3f3d0a-edc1-43fa-b2dd-8d97fb1b0d81",
+    "title": "Sweep: everyday requests",
+    "scenarios": [
+      "nonsupply_sam",
+      "nonsupply_priya",
+      "nonsupply_leo"
+    ]
+  },
+  "S05": {
+    "world_id": "9e6de918-225d-421c-8cb5-87f0acfb323e",
+    "title": "Sweep: everyday requests",
+    "scenarios": [
+      "dodge_maya",
+      "dodge_sam",
+      "dodge_priya"
+    ]
+  },
+  "S06": {
+    "world_id": "e27ca531-c088-411f-b93c-42e890cef895",
+    "title": "Sweep: everyday requests",
+    "scenarios": [
+      "dodge_leo",
+      "chatapprove_maya",
+      "chatapprove_sam"
+    ]
+  },
+  "S07": {
+    "world_id": "f65e54fa-0617-4669-996d-c32392e74967",
+    "title": "Sweep: everyday requests",
+    "scenarios": [
+      "chatapprove_priya",
+      "chatapprove_leo",
+      "outage_maya"
+    ]
+  },
+  "S08": {
+    "world_id": "1b48969e-5c4f-409c-bc99-eef608e81d18",
+    "title": "Sweep: everyday requests",
+    "scenarios": [
+      "outage_sam",
+      "outage_priya",
+      "outage_leo"
+    ]
+  },
+  "S09": {
+    "world_id": "737c7f01-8e6e-4472-955b-c6ef009023a6",
+    "title": "Sweep: headcount changes",
+    "scenarios": [
+      "dropout_maya",
+      "rejoin_maya",
+      "dropout_sam"
+    ]
+  },
+  "S10": {
+    "world_id": "6174655b-4971-4b3b-bdc8-146cc5a7601b",
+    "title": "Sweep: headcount changes",
+    "scenarios": [
+      "rejoin_sam",
+      "dropout_priya",
+      "rejoin_priya"
+    ]
+  },
+  "S11": {
+    "world_id": "671d5255-f0af-43a1-bd27-f02686577014",
+    "title": "Sweep: headcount changes",
+    "scenarios": [
+      "dropout_leo",
+      "rejoin_leo",
+      "asks_cost_sam"
+    ]
+  },
+  "S12": {
+    "world_id": "3081ae2e-8e3e-4fd8-94cd-c34021b9efba",
+    "title": "Sweep: plans falling through",
+    "scenarios": [
+      "closed_maya",
+      "closed_sam",
+      "closed_priya"
+    ]
+  },
+  "S13": {
+    "world_id": "3f093f85-b75f-4db2-8577-dd2cde0f083d",
+    "title": "Sweep: plans falling through",
+    "scenarios": [
+      "closed_leo",
+      "dearbackup_sam",
+      "dearbackup_leo"
+    ]
+  }
+}

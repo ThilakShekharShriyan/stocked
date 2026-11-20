@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Priya drops out of dinner",
+  "description": "A flatmate who can no longer make a booked dinner.",
+  "goals": [
+    "Say they can't make the dinner at Luca's",
+    "Find out what happens to the money"
+  ],
+  "constraints": [],
+  "communication": "Natural and brief.",
+  "initial_message": "Hey, it's Priya. I can't make the dinner at Luca's anymore.",
+  "memory_facts": [
+    "She is Priya",
+    "Dinner at Luca's is already booked"
+  ]
+}

@@ -1,0 +1,123 @@
+1
+00:00:03,000 --> 00:00:06,172
+When people share a home, nobody owns the shopping.
+
+2
+00:00:06,172 --> 00:00:12,331
+Things run out, get bought twice, and every group cost depends on a head count nobody can pin down.
+
+3
+00:00:12,331 --> 00:00:15,814
+Stocked is a shopping agent for people who share a home.
+
+4
+00:00:15,814 --> 00:00:18,365
+Nobody tracks anything, and nobody chats.
+
+5
+00:00:18,365 --> 00:00:23,341
+This is the house agent, four flatmates, and the agents and systems around them.
+
+6
+00:00:23,933 --> 00:00:26,299
+It starts with context it can trust.
+
+7
+00:00:26,299 --> 00:00:30,177
+Airbyte syncs the flat's receipts and everyone's calendars.
+
+8
+00:00:30,177 --> 00:00:36,881
+A small Superlinked model reads each receipt line, and a line only counts if it appears word for word.
+
+9
+00:00:36,881 --> 00:00:42,927
+Run-out dates are computed in SQL on SingleStore, from how often the flat re-buys each item.
+
+10
+00:00:43,533 --> 00:00:45,697
+Every decision shows its evidence.
+
+11
+00:00:45,697 --> 00:00:53,332
+Here is why coffee is marked as out: the receipts it read, the exact lines it matched, and the flatmate who reported it.
+
+12
+00:00:53,933 --> 00:00:56,784
+A model proposes a basket, but code decides.
+
+13
+00:00:56,784 --> 00:01:00,347
+Small restocks are ordered automatically, in test mode.
+
+14
+00:01:00,347 --> 00:01:09,352
+This party plan was over the house limit, so it waited for Maya, and Persona confirmed a real person was there before her approval counted.
+
+15
+00:01:09,352 --> 00:01:14,599
+A request for a bluetooth speaker was refused, because it is not a shared supply.
+
+16
+00:01:15,200 --> 00:01:17,462
+Group plans follow the head count.
+
+17
+00:01:17,462 --> 00:01:22,184
+Each person's agent answers from their own calendar and spending limit.
+
+18
+00:01:22,184 --> 00:01:24,446
+Leo is away, so his agent said no.
+
+19
+00:01:24,446 --> 00:01:27,838
+For three people, transit keeps everyone in budget.
+
+20
+00:01:27,838 --> 00:01:29,634
+For four, a cab is cheaper.
+
+21
+00:01:29,634 --> 00:01:38,281
+Every plan has a backup, and if the venue's page shows a closure, the agent switches only when that costs no more than was agreed.
+
+22
+00:01:38,867 --> 00:01:41,274
+We tested all of this with Firedrill.
+
+23
+00:01:41,274 --> 00:01:48,626
+Simulated flatmates talk to the agent, and payments go to a synthetic Stripe, so charges are counted, not judged.
+
+24
+00:01:48,626 --> 00:01:54,482
+Round zero found a real bug: after a payment outage, a small order could never be retried.
+
+25
+00:01:54,482 --> 00:01:58,450
+We fixed it, and the same scenario then charged exactly once.
+
+26
+00:01:58,450 --> 00:02:05,152
+Round two turned on backup plans, and a closed restaurant now ends with one refund and no extra charge.
+
+27
+00:02:05,767 --> 00:02:10,055
+Everything the agent does lands in one audit trail in SingleStore.
+
+28
+00:02:10,055 --> 00:02:20,256
+Each conversation, with its tool calls and scores, goes to Amplitude, tagged with the agent version, and Statsig gates decide which behaviour is switched on.
+
+29
+00:02:20,867 --> 00:02:21,396
+Stocked.
+
+30
+00:02:21,396 --> 00:02:25,366
+Reliable context, a real action, and the evidence behind it.
+
+31
+00:02:25,366 --> 00:02:30,527
+Every payment here is test mode, and the number of real-world actions is zero.

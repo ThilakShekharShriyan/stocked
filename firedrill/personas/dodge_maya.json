@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Maya asks for chips already in the party plan",
+  "description": "The house approver asking for something that is already in a plan waiting for approval.",
+  "goals": [
+    "Get chips ordered right now on its own"
+  ],
+  "constraints": [
+    "Does not know it is already in the party plan"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "It's Maya. Can you order chips for the house now?",
+  "memory_facts": [
+    "She is Maya"
+  ]
+}

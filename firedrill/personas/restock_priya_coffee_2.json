@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Priya asks for coffee",
+  "description": "A flatmate asking the house to restock coffee.",
+  "goals": [
+    "Get the house to buy coffee"
+  ],
+  "constraints": [
+    "Wants to know the price"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "Hi, it's Priya. We're out of coffee, can the house get some?",
+  "memory_facts": [
+    "She is Priya"
+  ]
+}

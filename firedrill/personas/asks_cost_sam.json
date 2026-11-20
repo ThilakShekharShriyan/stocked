@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Sam asks what dinner costs",
+  "description": "A flatmate checking on a booked dinner.",
+  "goals": [
+    "Find out who is going and what each person pays"
+  ],
+  "constraints": [
+    "Wants nothing changed"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "It's Sam. Who's coming to Luca's and what do I owe?",
+  "memory_facts": [
+    "He is Sam"
+  ]
+}

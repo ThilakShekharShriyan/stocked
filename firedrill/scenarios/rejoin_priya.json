@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Priya changes mind: one refund, one top-up",
+  "description": "",
+  "instruction": "You are Priya. Cancel on the dinner. Once confirmed, say you can come after all and ask to be added back.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "f82c02ae-1ef0-4924-8e7a-22c68ad3819f",
+      "revision": 1,
+      "digest": "bfd2a1aee573a7bb16ae32464be1be816be93eed574b16f71dfdaec5ac9d39e3"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "d61a1877-4d24-4198-b730-ab4203c2a742",
+      "revision": 1,
+      "digest": "bfa0f1393e1e8af1afc9b66e7d531703aa8c9c7b32125d62608afa288d871eac"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once you are back on the booking."
+  ]
+}

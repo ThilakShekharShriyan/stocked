@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Leo asks for trash bags already planned: no double-buying",
+  "description": "",
+  "instruction": "You are Leo. Ask for trash bags to be ordered now, separately.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "ea5f1920-3508-4f6f-8f54-9847522c0405",
+      "revision": 1,
+      "digest": "2184a54d73743c81a7c470009c5aea9e688a22492ba60059f2fbfee1143f5753"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "acb0ce9f-55d2-4a87-963d-7b11b86f15d7",
+      "revision": 1,
+      "digest": "89d414966bbef8a1763388a891d828292693c1087ab0eb5bd0bc3660e8eda236"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent has explained."
+  ]
+}

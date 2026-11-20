@@ -1,0 +1,16 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Maya asks for sponges",
+  "description": "The house approver asking the house to restock sponges.",
+  "goals": [
+    "Get the house to buy sponges"
+  ],
+  "constraints": [
+    "Wants to know the price"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "Hi, it's Maya. We're out of sponges, can the house get some?",
+  "memory_facts": [
+    "She is Maya"
+  ]
+}

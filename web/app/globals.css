@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* Stocked design system: deep charcoal, warm ivory, and four muted semantic accents.
+   The neutral and accent scales are remapped so every existing component reads correctly on dark. */
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --color-ink: #10100f;
+  --color-surface: #191917;
+  --color-raised: #21201d;
+  --color-line: #2f2e29;
+  --color-ivory: #efe9dc;
+  --color-sage: #8fb08a;
+  --color-ember: #d9a441;
+  --color-clay: #cf6f52;
+  --color-mist: #86a8cb;
+
+  --color-white: #191917;
+  --color-stone-50: #21201d;
+  --color-stone-100: #292824;
+  --color-stone-200: #33322d;
+  --color-stone-300: #4a4841;
+  --color-stone-400: #7f7a6c;
+  --color-stone-500: #9f9989;
+  --color-stone-600: #bbb5a4;
+  --color-stone-700: #d3cdbc;
+  --color-stone-800: #e4decf;
+  --color-stone-900: #efe9dc;
+
+  --color-emerald-100: #20301f;
+  --color-emerald-600: #7fa87a;
+  --color-emerald-700: #9cc296;
+  --color-emerald-800: #afd1a9;
+  --color-emerald-900: #c3dfbe;
+
+  --color-amber-50: #2a2313;
+  --color-amber-100: #382d12;
+  --color-amber-300: #6d5620;
+  --color-amber-500: #d9a441;
+  --color-amber-700: #e4b95f;
+  --color-amber-800: #ecc878;
+  --color-amber-900: #f2d795;
+
+  --color-red-50: #2c1a15;
+  --color-red-100: #3b2019;
+  --color-red-300: #713727;
+  --color-red-600: #cf6f52;
+  --color-red-700: #df8469;
+  --color-red-800: #e89a82;
+  --color-red-900: #f0b4a0;
+
+  --color-teal-50: #1b2928;
+  --color-teal-700: #74aaa3;
+  --color-teal-800: #93c0b9;
+  --color-teal-900: #b0d4ce;
+
+  --color-violet-100: #2a2440;
+  --color-violet-900: #cdc2f2;
+
+  --color-sky-100: #1b2937;
+  --color-sky-800: #a9c8e6;
+}
+
+html,
+body {
+  background: var(--color-ink);
+  color: var(--color-ivory);
+}
+
+mark {
+  background: #5d4a17;
+  color: #f6e3ae;
+  padding: 0 3px;
+  border-radius: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ember);
+  outline-offset: 2px;
+}
+
+input[type="range"] {
+  accent-color: var(--color-sage);
+}
+
+::selection {
+  background: #4b4a2c;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.rise { animation: rise 0.35s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

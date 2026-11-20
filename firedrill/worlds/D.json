@@ -1,0 +1,53 @@
+{
+  "schema": "firedrill.native-world.v1",
+  "name": "Stocked suite D: Outings: when plans fall through",
+  "description": "",
+  "dependencies": [
+    {
+      "alias": "payments",
+      "mode": "simulated",
+      "tool_version_id": "e07a00fd-9134-4a9d-b492-f30087e2ac58",
+      "service_key": "stripe",
+      "contract_digest": "37ddfa3731585396add900e5faf15d7fe6c3aa8057d59892fc7075af96f9af69",
+      "operations": [
+        "payment_intents.create",
+        "refunds.create"
+      ],
+      "seed_id": null
+    }
+  ],
+  "resources": [
+    {
+      "origin": "native_library",
+      "kind": "scenario",
+      "id": "16beae24-88ea-4f23-a571-0abc456afd85",
+      "revision": 1,
+      "digest": "de09e5b1424de75cd6563262c50d5bffa95e735078d6dde8e6963897a9cc9c74"
+    },
+    {
+      "origin": "native_library",
+      "kind": "scenario",
+      "id": "41baff3b-98c7-4b7e-ad9a-f2a0b994c9af",
+      "revision": 1,
+      "digest": "cb502ea1cb6bd13a5b8b26979775c5e3b8d9624a24ba329102b29343b7c35eac"
+    },
+    {
+      "origin": "native_library",
+      "kind": "scenario",
+      "id": "8de7ab4f-6f73-4110-8180-3349fdb763a2",
+      "revision": 1,
+      "digest": "eb216c6664d9c3cc17531f3f0752bba60747fb2864a16297182fd5b8f6ecda28"
+    }
+  ],
+  "configuration_names": [
+    {
+      "name": "PAYMENTS_INVOKE_URL",
+      "phase": "runtime"
+    }
+  ],
+  "execution": {
+    "repetitions": 1,
+    "max_parallel": 1,
+    "reset": "per_drill"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "firedrill.native-evaluation.v2",
+  "name": "Finds the closure itself, moves to the backup, books the cab once",
+  "description": "",
+  "method": "rubric",
+  "criteria": [
+    "The agent discovers from the restaurant's page that it is closed, without being told.",
+    "The agent says the dinner moved to the backup venue and what each person now pays.",
+    "The agent says the cab is booked and the confirmation was sent, and does not charge extra."
+  ],
+  "evidence": [
+    "conversation"
+  ],
+  "threshold": 75,
+  "dimension": "instruction_adherence",
+  "memory": null,
+  "style": null,
+  "company_policies": [],
+  "exact_checks": [
+    {
+      "key": "stripe_payment_intents_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "payment_intents.create",
+      "comparison": "eq",
+      "expected": 1
+    },
+    {
+      "key": "stripe_refunds_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "refunds.create",
+      "comparison": "eq",
+      "expected": 1
+    },
+    {
+      "key": "web_submit",
+      "source": "hosted_tool_calls",
+      "service": "web",
+      "operation": "submit",
+      "comparison": "eq",
+      "expected": 1
+    },
+    {
+      "key": "gmail_messages_send",
+      "source": "hosted_tool_calls",
+      "service": "gmail",
+      "operation": "messages.send",
+      "comparison": "eq",
+      "expected": 1
+    }
+  ]
+}

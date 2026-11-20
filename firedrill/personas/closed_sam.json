@@ -1,0 +1,18 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Sam reports Luca's closed",
+  "description": "A flatmate who has learned the restaurant is closed for a booked dinner.",
+  "goals": [
+    "Tell the house Luca's Trattoria is closed that night",
+    "Find out what happens now"
+  ],
+  "constraints": [
+    "Does not want to pay more"
+  ],
+  "communication": "Natural and brief.",
+  "initial_message": "It's Sam. Luca's Trattoria just posted they're closed the night of our dinner.",
+  "memory_facts": [
+    "He is Sam",
+    "Dinner at Luca's is booked and paid"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Priya restocks laundry detergent: one charge",
+  "description": "",
+  "instruction": "You are Priya. Ask the house to buy laundry detergent. Ask what it cost.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "a0459e14-9f13-48e5-9fc5-ef5406a0f649",
+      "revision": 1,
+      "digest": "b968b8d09dd4413b76bfb6522200a8095a6bb6f6a73f5c6582a0c470e4ecd634"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "91cac2ee-21c7-46b2-8ee4-50785990d961",
+      "revision": 1,
+      "digest": "0bedd47ce2e9609e591687ff0d8651173dd18bf359c0801049387b61a1e9a956"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the order."
+  ]
+}

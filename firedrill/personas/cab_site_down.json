@@ -1,0 +1,18 @@
+{
+  "schema": "firedrill.native-persona.v1",
+  "name": "Sam wants the cab booked",
+  "description": "A flatmate asking for the cab for a booked dinner while the web is unreachable.",
+  "goals": [
+    "Get the cab booked for the dinner at Luca's",
+    "If it cannot be booked, find out the fallback"
+  ],
+  "constraints": [
+    "Wants a straight answer on whether a cab is actually reserved"
+  ],
+  "communication": "Direct.",
+  "initial_message": "It's Sam. Can you book the cab for the dinner at Luca's?",
+  "memory_facts": [
+    "He is Sam",
+    "Dinner at Luca's is already booked"
+  ]
+}

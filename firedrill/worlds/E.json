@@ -1,0 +1,103 @@
+{
+  "schema": "firedrill.native-world.v1",
+  "name": "Stocked suite E: Outside world: web, calendar, mail",
+  "description": "",
+  "dependencies": [
+    {
+      "alias": "payments",
+      "mode": "simulated",
+      "tool_version_id": "e07a00fd-9134-4a9d-b492-f30087e2ac58",
+      "service_key": "stripe",
+      "contract_digest": "37ddfa3731585396add900e5faf15d7fe6c3aa8057d59892fc7075af96f9af69",
+      "operations": [
+        "payment_intents.create",
+        "refunds.create"
+      ],
+      "seed_id": null
+    },
+    {
+      "alias": "web",
+      "mode": "simulated",
+      "tool_version_id": "aa6e8348-080e-4388-a313-c3088fb24a99",
+      "service_key": "web",
+      "contract_digest": "b485f376b513f83ac952f8069e4128731c11c0e5f4541f215e634a1840781b24",
+      "operations": [
+        "sites.create",
+        "pages.publish",
+        "fetch",
+        "submit"
+      ],
+      "seed_id": null
+    },
+    {
+      "alias": "calendar",
+      "mode": "simulated",
+      "tool_version_id": "3b3fd745-5817-4826-bc47-e9ee0b9b74a3",
+      "service_key": "calendar",
+      "contract_digest": "c04933b1cca80fe90c2aa7d50d3fa6be64a148be6bc955dab9e4500d9b737a7b",
+      "operations": [
+        "calendars.insert",
+        "events.insert",
+        "freebusy.query"
+      ],
+      "seed_id": null
+    },
+    {
+      "alias": "mail",
+      "mode": "simulated",
+      "tool_version_id": "ec99b290-53b1-498e-b896-06d76d68eaf1",
+      "service_key": "gmail",
+      "contract_digest": "eb23e03699aaff267fce7c924cda2fa1911a7ea9817e30a7b3a324d5bd67c2ea",
+      "operations": [
+        "messages.send"
+      ],
+      "seed_id": null
+    }
+  ],
+  "resources": [
+    {
+      "origin": "native_library",
+      "kind": "scenario",
+      "id": "7086f82a-ca04-4399-b2a0-47cc55fd53de",
+      "revision": 1,
+      "digest": "697a68acd3c4c7730e002af2532566435902e74ce5f39b6fd46ab387c70c4b11"
+    },
+    {
+      "origin": "native_library",
+      "kind": "scenario",
+      "id": "7a06c2ad-e367-4474-9ab3-503803b54d58",
+      "revision": 1,
+      "digest": "469b4b467ec568d6afebce7f69f850dd0da51474e85eebc7edf01add45e739ca"
+    },
+    {
+      "origin": "native_library",
+      "kind": "scenario",
+      "id": "b775cdf1-877f-4965-9a09-f2f841f22fd1",
+      "revision": 1,
+      "digest": "cf2a1c72896f2e76a28d63c7f6b210db9188daba949bd718271be849f50a31d1"
+    }
+  ],
+  "configuration_names": [
+    {
+      "name": "PAYMENTS_INVOKE_URL",
+      "phase": "runtime"
+    },
+    {
+      "name": "WEB_INVOKE_URL",
+      "phase": "runtime"
+    },
+    {
+      "name": "CALENDAR_INVOKE_URL",
+      "phase": "runtime"
+    },
+    {
+      "name": "MAIL_INVOKE_URL",
+      "phase": "runtime"
+    }
+  ],
+  "execution": {
+    "repetitions": 1,
+    "max_parallel": 1,
+    "reset": "per_drill"
+  }
+}

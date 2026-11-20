@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Backup question only: nothing changes",
+  "description": "",
+  "instruction": "You are Sam. Ask what the backup is if Luca's falls through. Do not report any closure.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "28521efb-2c96-462d-9973-95e150824678",
+      "revision": 1,
+      "digest": "af5a9a8d17f0f588dcf905a192f6b6031a7dfbbfdbe9f68c8ee68641839b63c5"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "35015e9a-aebb-4867-8026-882293744455",
+      "revision": 1,
+      "digest": "71fc8d988c89c5ada1f6851b00fad4e2ec7d5b1360681e2d70efe730022fcf99"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once you have the answer."
+  ]
+}

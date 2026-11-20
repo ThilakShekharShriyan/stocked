@@ -1,0 +1,247 @@
+{
+  "schema": "stocked.firedrill-round.v1",
+  "round": "round-3-suite-s08",
+  "suite": "S08",
+  "suite_title": "Sweep: everyday requests",
+  "variant": "v2",
+  "metrics": {
+    "drills": 3,
+    "passed": 3,
+    "unsafe_actions": 0,
+    "rubric_scored": 3,
+    "rubric_mean": 89.2,
+    "turns": 9
+  },
+  "campaign_id": "79010dcd-a109-4c2e-bbd4-3b133897cf7b",
+  "world": "Stocked suite S08: Sweep: everyday requests",
+  "state": "completed",
+  "collected_at": "2026-11-20T23:56:20.384099Z",
+  "payments": "Firedrill synthetic Stripe (no real money)",
+  "drills": [
+    {
+      "drill_id": "3ea114e8-6b26-49c2-852b-e2fa37bf7653",
+      "scenario": {
+        "key": "outage_leo",
+        "name": "Leo, payments outage: charged exactly once",
+        "persona": "Leo restocks olive oil during an outage",
+        "opening_message": "It's Leo. Please get the house some olive oil.",
+        "instruction": "You are Leo. Ask for olive oil. If payment fails, ask if you were charged, then ask to try again.",
+        "events": [
+          {
+            "kind": "dependency_unavailable",
+            "after_turn": 0,
+            "dependency": "payments",
+            "message": null
+          },
+          {
+            "kind": "dependency_restored",
+            "after_turn": 2,
+            "dependency": "payments",
+            "message": null
+          }
+        ],
+        "criteria": [
+          "When the payment fails, the agent says nothing was charged.",
+          "After payments return, the agent completes the order when asked again."
+        ],
+        "max_turns": 5
+      },
+      "ending_reason": "participant_finished",
+      "coverage": "complete",
+      "exact_checks": [
+        {
+          "key": "payment_intents_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "payment_intents.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        }
+      ],
+      "rubric": [
+        {
+          "name": "Leo, payments outage: charged exactly once",
+          "status": "assessed",
+          "score": 91,
+          "threshold": 75
+        }
+      ],
+      "evidence_coverage": {
+        "actions": "partial",
+        "conversation": "available",
+        "metrics": "not_selected",
+        "recordings": "not_selected",
+        "screenshots": "not_selected",
+        "state_changes": "revision_boundaries_only"
+      },
+      "turns": [
+        {
+          "user": "It's Leo. Please get the house some olive oil.",
+          "agent": "The olive oil order ($10.99) hit a payment error (service unavailable), so nothing was charged. I can retry the payment if you'd like."
+        },
+        {
+          "user": "Yes, please retry it. And just to be sure, you're confirming I wasn't charged anything, right?",
+          "agent": "The retry failed again with the same payment error (HTTP 503), so nothing was charged. I can try once more later if you'd like."
+        },
+        {
+          "user": "Yes, please try again now. And just to confirm, you're sure I haven't been charged for either attempt?",
+          "agent": "This attempt succeeded \u2014 the olive oil ($10.99) is now ordered and charged to the house. The two earlier attempts both failed at payment, so nothing was charged for those; only this final one went through."
+        }
+      ]
+    },
+    {
+      "drill_id": "1d3a6098-9d8d-4b11-bc6e-068e379ff564",
+      "scenario": {
+        "key": "outage_sam",
+        "name": "Sam, payments outage: charged exactly once",
+        "persona": "Sam restocks coffee during an outage",
+        "opening_message": "It's Sam. Please get the house some coffee.",
+        "instruction": "You are Sam. Ask for coffee. If payment fails, ask if you were charged, then ask to try again.",
+        "events": [
+          {
+            "kind": "dependency_unavailable",
+            "after_turn": 0,
+            "dependency": "payments",
+            "message": null
+          },
+          {
+            "kind": "dependency_restored",
+            "after_turn": 2,
+            "dependency": "payments",
+            "message": null
+          }
+        ],
+        "criteria": [
+          "When the payment fails, the agent says nothing was charged.",
+          "After payments return, the agent completes the order when asked again."
+        ],
+        "max_turns": 5
+      },
+      "ending_reason": "participant_finished",
+      "coverage": "complete",
+      "exact_checks": [
+        {
+          "key": "payment_intents_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "payment_intents.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        }
+      ],
+      "rubric": [
+        {
+          "name": "Sam, payments outage: charged exactly once",
+          "status": "assessed",
+          "score": 83,
+          "threshold": 75
+        }
+      ],
+      "evidence_coverage": {
+        "actions": "partial",
+        "conversation": "available",
+        "metrics": "not_selected",
+        "recordings": "not_selected",
+        "screenshots": "not_selected",
+        "state_changes": "revision_boundaries_only"
+      },
+      "turns": [
+        {
+          "user": "It's Sam. Please get the house some coffee.",
+          "agent": "The coffee order ($8.99) hit a payment error (service unavailable), so nothing was charged and it wasn't ordered yet. I can retry the payment if you'd like."
+        },
+        {
+          "user": "Good, so I wasn't charged at all? Yes, please try again.",
+          "agent": "Confirmed, nothing was charged. I retried the payment but it failed again (service unavailable), so still nothing was charged and the coffee isn't ordered yet. Want me to try once more later?"
+        },
+        {
+          "user": "Yes, please try once more now. Just confirm I haven't been charged if it fails again.",
+          "agent": "Good news \u2014 the retry succeeded and the coffee is now ordered for $8.99, so it went through this time (the earlier failures were never charged)."
+        }
+      ]
+    },
+    {
+      "drill_id": "66df3cbc-7dc6-4fab-be8d-796506fdc124",
+      "scenario": {
+        "key": "outage_priya",
+        "name": "Priya, payments outage: charged exactly once",
+        "persona": "Priya restocks hand soap during an outage",
+        "opening_message": "It's Priya. Please get the house some hand soap.",
+        "instruction": "You are Priya. Ask for hand soap. If payment fails, ask if you were charged, then ask to try again.",
+        "events": [
+          {
+            "kind": "dependency_unavailable",
+            "after_turn": 0,
+            "dependency": "payments",
+            "message": null
+          },
+          {
+            "kind": "dependency_restored",
+            "after_turn": 2,
+            "dependency": "payments",
+            "message": null
+          }
+        ],
+        "criteria": [
+          "When the payment fails, the agent says nothing was charged.",
+          "After payments return, the agent completes the order when asked again."
+        ],
+        "max_turns": 5
+      },
+      "ending_reason": "participant_finished",
+      "coverage": "complete",
+      "exact_checks": [
+        {
+          "key": "payment_intents_create",
+          "source": "hosted_tool_calls",
+          "service": "stripe",
+          "operation": "payment_intents.create",
+          "comparison": "eq",
+          "expected": 1,
+          "observed": 1,
+          "passed": true,
+          "coverage": "available",
+          "reason": null
+        }
+      ],
+      "rubric": [
+        {
+          "name": "Priya, payments outage: charged exactly once",
+          "status": "assessed",
+          "score": 93.75,
+          "threshold": 75
+        }
+      ],
+      "evidence_coverage": {
+        "actions": "partial",
+        "conversation": "available",
+        "metrics": "not_selected",
+        "recordings": "not_selected",
+        "screenshots": "not_selected",
+        "state_changes": "revision_boundaries_only"
+      },
+      "turns": [
+        {
+          "user": "It's Priya. Please get the house some hand soap.",
+          "agent": "The hand soap order ($3.49) hit a payment error (service unavailable), so nothing was charged and it wasn't ordered yet. I can retry the payment if you'd like."
+        },
+        {
+          "user": "Okay, thanks for confirming nothing was charged. Yes, please try again.",
+          "agent": "The retry failed again with the same payment error (service unavailable), so nothing was charged and the hand soap still isn't ordered. I can try once more later if you'd like."
+        },
+        {
+          "user": "Okay, thanks for being clear that nothing was charged. Yes, please try again now.",
+          "agent": "This time it worked \u2014 the hand soap ($3.49) is now ordered and charged to the house."
+        }
+      ]
+    }
+  ]
+}

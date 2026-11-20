@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Drop-out: one refund, no new charge",
+  "description": "",
+  "instruction": "You are Sam. Say you can't make the dinner at Luca's. Ask what happens to the booking and the money.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "50e07286-53be-490a-9b09-fba19a1c2510",
+      "revision": 1,
+      "digest": "994ce00fa0e323b03aae872b03780bb68698cade5b668d19e7ba87b156f47080"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "e033249a-ea6d-4203-9e26-7d5df6d54c92",
+      "revision": 1,
+      "digest": "3c7f737e3a53a9528c7f67676a81017252e202b90e302ed4806c9f13ec77ed30"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent confirms the booking was updated."
+  ]
+}

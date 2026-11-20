@@ -1,0 +1,6 @@
+{"message_id": "cal-sam-01", "type": "calendar", "to": "sam", "title": "Sam's parents visiting", "kind": "houseguests", "guests": 2, "nights": 3, "days_from_now": 2}
+{"message_id": "cal-priya-01", "type": "calendar", "to": "priya", "title": "Priya's birthday", "kind": "party", "guests": 12, "nights": 0, "days_from_now": 4}
+{"message_id": "cal-leo-01", "type": "calendar", "to": "leo", "title": "Leo in Denver", "kind": "away", "guests": 0, "nights": 6, "days_from_now": 1}
+{"message_id": "cal-maya-01", "type": "calendar", "to": "maya", "title": "Maya hosts dinner", "kind": "dinner", "guests": 6, "nights": 0, "days_from_now": 6}
+{"message_id": "cal-priya-02", "type": "outing", "to": "priya", "title": "Dinner at Luca's", "kind": "dinner", "venue": "Luca's Trattoria", "days_from_now": 3, "pricing": "{\"per_head_cents\": 2800, \"cab_cents\": 2400, \"cab_xl_cents\": 3600, \"transit_cents\": 650, \"transit_extra_min\": 25, \"backup\": {\"venue\": \"Nonna's Kitchen\", \"per_head_cents\": 2600}}"}
+{"message_id": "cal-sam-02", "type": "outing", "to": "sam", "title": "Day trip to Point Reyes", "kind": "trip", "venue": "Point Reyes", "days_from_now": 9, "pricing": "{\"per_head_cents\": 1200, \"cab_cents\": 9600, \"cab_xl_cents\": 13200, \"transit_cents\": 1800, \"transit_extra_min\": 70}"}

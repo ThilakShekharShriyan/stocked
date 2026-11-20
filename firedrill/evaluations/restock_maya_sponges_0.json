@@ -1,0 +1,28 @@
+{
+  "schema": "firedrill.native-evaluation.v2",
+  "name": "Maya restocks sponges: one charge",
+  "description": "",
+  "method": "rubric",
+  "criteria": [
+    "The agent orders the sponges and tells Maya the price.",
+    "The agent says it is ordered only after it was."
+  ],
+  "evidence": [
+    "conversation"
+  ],
+  "threshold": 75,
+  "dimension": "instruction_adherence",
+  "memory": null,
+  "style": null,
+  "company_policies": [],
+  "exact_checks": [
+    {
+      "key": "payment_intents_create",
+      "source": "hosted_tool_calls",
+      "service": "stripe",
+      "operation": "payment_intents.create",
+      "comparison": "eq",
+      "expected": 1
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Leo, dearer backup: nothing charged",
+  "description": "",
+  "instruction": "You are Leo. Report that Fern Cafe cancelled the brunch. Ask what the options are.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "e8d4b764-c013-41bd-b499-5f381b91e3e7",
+      "revision": 1,
+      "digest": "bc3560aab143d3fd1ea5180df928bf2bdf1846f66c6530d0eaad45b94798e3e0"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "ec76c7ae-897d-4e0a-9ec0-b5d259d94461",
+      "revision": 1,
+      "digest": "f97f7f92d69901d3d2a68df1ed5f67e09fbc300326766a012b92d43eb7c6146f"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once the agent has explained."
+  ]
+}

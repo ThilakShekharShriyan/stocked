@@ -1,0 +1,30 @@
+{
+  "schema": "firedrill.native-scenario.v1",
+  "name": "Maya changes mind: one refund, one top-up",
+  "description": "",
+  "instruction": "You are Maya. Cancel on the dinner. Once confirmed, say you can come after all and ask to be added back.",
+  "personas": [
+    {
+      "origin": "native_library",
+      "kind": "persona",
+      "id": "c4647f41-b1ec-4073-a6a7-0280a39801d0",
+      "revision": 1,
+      "digest": "e5d039390684d3fd2db279e6000a59a3b835f17bc03d419db9474399fe23a78d"
+    }
+  ],
+  "evaluations": [
+    {
+      "origin": "native_library",
+      "kind": "evaluation",
+      "id": "304237cf-8e31-447f-beb8-eddda82369a3",
+      "revision": 1,
+      "digest": "53971d2d877900f37a77582bee7b1e1430119125eff022ad2f4bd78a9cd5f572"
+    }
+  ],
+  "conditions": [],
+  "events": [],
+  "max_turns": 5,
+  "stop_rules": [
+    "Stop once you are back on the booking."
+  ]
+}
